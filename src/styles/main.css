@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.dark-center {
+  background: radial-gradient(100% 100% at 50% 100%, #272E3D 0%, #3B7B80 100%);
+}
+
+.dark-center p {
+  color: #FCFCFC;
+}
+
+.dark-right {
+  background: radial-gradient(100% 197.75% at 100% 0%, #272E3D 0%, #3B7B80 100%);
+}
+
+.dark-right p {
+  color: #FCFCFC;
+}
+
+.dark-left {
+  background: radial-gradient(100% 197.75% at 0% 0%, #272E3D 0%, #3B7B80 100%);
+}
+
+.dark-left p {
+  color: #FCFCFC;
+}
+
+.light-center {
+  background: radial-gradient(100% 100% at 50% 100%, #EAEAEA 0%, #FFFFFF 100%);
+}
+
+.light-center p {
+  color: #323232;
+}
+
+.light-right {
+  background: radial-gradient(100% 197.75% at 100% 0%, #EAEAEA 0%, #FFFFFF 100%);
+}
+
+.light-right p {
+  color: #323232;
+}
+
+.light-left {
+  background: radial-gradient(100% 197.75% at 0% 0%, #EAEAEA 0%, #FFFFFF 100%);
+}
+
+.light-left p {
+  color: #323232;
+}
+/*# sourceMappingURL=main.css.map */

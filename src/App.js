@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
 function App() {
+  const [positionAndMode, setPositionAndMode] = useState({position: 'center', mode: 'dark'})
+
   return (
-    <div className="App">
+    <div className={positionAndMode.mode + '-' + positionAndMode.position}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>my heading</h1>
+        <p>Edit and save to reload.</p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -20,6 +19,8 @@ function App() {
       </header>
     </div>
   );
+  
+  
 }
 
 export default App;
