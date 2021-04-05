@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap');
+@import '../utilities/variables';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $paragraph-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: $heading-font}
+
+h1 {font-size: $heading-xl; font-weight: normal;}
+h2 {font-size: $heading-l; font-weight: normal;}
+h3 {font-size: $heading-m}
+h4 {font-size: $heading-s}
+p {font-size: $paragraph-m}

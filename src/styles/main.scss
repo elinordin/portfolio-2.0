@@ -1,0 +1,14 @@
+// UTILITIES
+@import './utilities/variables';
+@import './utilities/mixins';
+
+// BASE
+@import './general/general';
+@import './general/themes';
+
+// PAGES
+@import './pages/app';
+
+// COMPONENTS
+@import './components/switches';
+@import './components/center';
