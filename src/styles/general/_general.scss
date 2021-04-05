@@ -16,8 +16,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {font-family: $heading-font}
 
-h1 {font-size: $heading-xl}
-h2 {font-size: $heading-l}
+h1 {font-size: $heading-xl; font-weight: 400;}
+h2 {font-size: $heading-l; font-weight: 400;}
 h3 {font-size: $heading-m}
 h4 {font-size: $heading-s}
 p {font-size: $paragraph-m}

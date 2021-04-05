@@ -18,10 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25rem;
+  font-weight: 400;
 }
 
 h2 {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 h3 {
@@ -36,51 +38,37 @@ p {
   font-size: 1.125rem;
 }
 
-.dark-center {
-  background: radial-gradient(100% 100% at 50% 100%, #272E3D 0%, #3B7B80 100%);
+#app {
+  height: 100vh;
 }
 
-.dark-center p {
+.dark-center {
+  background: radial-gradient(100% 100% at 50% 100%, #272E3D 0%, #3B7B80 100%);
   color: #FCFCFC;
 }
 
 .dark-right {
-  background: radial-gradient(100% 197.75% at 100% 0%, #272E3D 0%, #3B7B80 100%);
-}
-
-.dark-right p {
+  background: radial-gradient(100% 197.75% at 0% 100%, #272E3D 0%, #3B7B80 100%);
   color: #FCFCFC;
 }
 
 .dark-left {
-  background: radial-gradient(100% 197.75% at 0% 0%, #272E3D 0%, #3B7B80 100%);
-}
-
-.dark-left p {
+  background: radial-gradient(100% 197.75% at 100% 100%, #272E3D 0%, #3B7B80 100%);
   color: #FCFCFC;
 }
 
 .light-center {
   background: radial-gradient(100% 100% at 50% 100%, #EAEAEA 0%, #FFFFFF 100%);
-}
-
-.light-center p {
   color: #323232;
 }
 
 .light-right {
-  background: radial-gradient(100% 197.75% at 100% 0%, #EAEAEA 0%, #FFFFFF 100%);
-}
-
-.light-right p {
+  background: radial-gradient(100% 197.75% at 0% 100%, #EAEAEA 0%, #FFFFFF 100%);
   color: #323232;
 }
 
 .light-left {
-  background: radial-gradient(100% 197.75% at 0% 0%, #EAEAEA 0%, #FFFFFF 100%);
-}
-
-.light-left p {
+  background: radial-gradient(100% 197.75% at 100% 100%, #EAEAEA 0%, #FFFFFF 100%);
   color: #323232;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,29 +1,33 @@
+#app {
+    height: 100vh
+}
+
 .dark-center {
     background: radial-gradient($centeredRadial,$darkmode-radial);
-    p{color: $white};
+    color: $white
 }
   
 .dark-right {
     background: radial-gradient($rightRadial,$darkmode-radial);
-    p{color: $white}
+    color: $white
 }
   
 .dark-left {
     background: radial-gradient($leftRadial,$darkmode-radial);
-    p{color: $white}
+    color: $white
 }
   
 .light-center {
     background: radial-gradient($centeredRadial,$lightmode-radial);
-    p{color: $black}
+    color: $black
 }
 
 .light-right {
     background: radial-gradient($rightRadial,$lightmode-radial);
-    p{color: $black}
+    color: $black
 }
 
 .light-left {
     background: radial-gradient($leftRadial,$lightmode-radial);
-    p{color: $black}
+    color: $black
 }
