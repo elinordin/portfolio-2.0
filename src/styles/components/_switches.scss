@@ -1,0 +1,39 @@
+@import '../utilities/variables';
+
+.switches-container {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.switch-background {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    border-radius: 50px;
+    p {
+        font-size: $paragraph-xs;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    img {
+        height: 25px
+    }
+}
+
+.switch-on {
+    background: linear-gradient($warm-gradient);
+    flex-direction: row-reverse;
+    p {
+        margin-left: 10px;
+        margin-right: 7px;
+    }
+}
+
+.switch-off {
+    background: linear-gradient($cold-gradient);
+    flex-direction: row;
+    p {
+        margin-left: 7px;
+        margin-right: 10px;
+    }
+}

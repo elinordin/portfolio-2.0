@@ -18,12 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 h3 {
@@ -70,5 +70,66 @@ p {
 .light-left {
   background: radial-gradient(100% 197.75% at 100% 100%, #EAEAEA 0%, #FFFFFF 100%);
   color: #323232;
+}
+
+.switches-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.switch-background {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3px;
+  border-radius: 50px;
+}
+
+.switch-background p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.switch-background img {
+  height: 25px;
+}
+
+.switch-on {
+  background: -webkit-gradient(linear, right top, left top, from(#FDD961), to(#FEB02B));
+  background: linear-gradient(270deg, #FDD961 0%, #FEB02B 100%);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.switch-on p {
+  margin-left: 10px;
+  margin-right: 7px;
+}
+
+.switch-off {
+  background: -webkit-gradient(linear, right top, left top, from(#009EFF), to(#0051A3));
+  background: linear-gradient(270deg, #009EFF 0%, #0051A3 100%);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.switch-off p {
+  margin-left: 7px;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
