@@ -1,0 +1,12 @@
+
+.dark-center, .dark-right, .dark-left {color: $white}
+
+.dark-center {background: radial-gradient($centeredRadial,$darkmode-radial)}
+.dark-right {background: radial-gradient($rightRadial,$darkmode-radial)}
+.dark-left {background: radial-gradient($leftRadial,$darkmode-radial)}
+
+.light-center, .light-right, .light-left {color: $black}
+  
+.light-center {background: radial-gradient($centeredRadial,$lightmode-radial)}
+.light-right {background: radial-gradient($rightRadial,$lightmode-radial)}
+.light-left {background: radial-gradient($leftRadial,$lightmode-radial)}

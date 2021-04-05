@@ -38,38 +38,50 @@ p {
   font-size: 1.125rem;
 }
 
-#app {
-  height: 100vh;
+.dark-center, .dark-right, .dark-left {
+  color: #FCFCFC;
 }
 
 .dark-center {
   background: radial-gradient(100% 100% at 50% 100%, #272E3D 0%, #3B7B80 100%);
-  color: #FCFCFC;
 }
 
 .dark-right {
   background: radial-gradient(100% 197.75% at 0% 100%, #272E3D 0%, #3B7B80 100%);
-  color: #FCFCFC;
 }
 
 .dark-left {
   background: radial-gradient(100% 197.75% at 100% 100%, #272E3D 0%, #3B7B80 100%);
-  color: #FCFCFC;
+}
+
+.light-center, .light-right, .light-left {
+  color: #323232;
 }
 
 .light-center {
-  background: radial-gradient(100% 100% at 50% 100%, #EAEAEA 0%, #FFFFFF 100%);
-  color: #323232;
+  background: radial-gradient(100% 100% at 50% 100%, #E2E2E2 0%, #FFFFFF 100%);
 }
 
 .light-right {
-  background: radial-gradient(100% 197.75% at 0% 100%, #EAEAEA 0%, #FFFFFF 100%);
-  color: #323232;
+  background: radial-gradient(100% 197.75% at 0% 100%, #E2E2E2 0%, #FFFFFF 100%);
 }
 
 .light-left {
-  background: radial-gradient(100% 197.75% at 100% 100%, #EAEAEA 0%, #FFFFFF 100%);
-  color: #323232;
+  background: radial-gradient(100% 197.75% at 100% 100%, #E2E2E2 0%, #FFFFFF 100%);
+}
+
+#app {
+  height: 100vh;
+}
+
+header {
+  padding: 4% 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .switches-container {
@@ -80,6 +92,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .switch-background {
@@ -92,8 +107,9 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 3px;
+  padding: 2px;
   border-radius: 50px;
+  width: 80px;
 }
 
 .switch-background p {

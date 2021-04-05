@@ -1,16 +1,16 @@
-@import '../utilities/variables';
-
 .switches-container {
     display: inline-flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .switch-background {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3px;
+    padding: 2px;
     border-radius: 50px;
+    width: 80px;
     p {
         font-size: $paragraph-xs;
         color: rgba(255, 255, 255, 0.7);

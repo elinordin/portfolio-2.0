@@ -4,7 +4,10 @@
 
 // BASE
 @import './general/general';
+@import './general/themes';
+
+// PAGES
+@import './pages/app';
 
 // COMPONENTS
-@import './components/app';
 @import './components/switches';
