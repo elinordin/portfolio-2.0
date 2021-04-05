@@ -1,9 +1,16 @@
 #app {
     height: 100vh;
-}
-
-header {
-    padding: 4% 8%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+
+    header {
+        padding: 3% 8%;
+        display: flex;
+        justify-content: space-between;
+    }
+    main {
+        padding: 0 8%;
+        flex-grow: 1;
+    }
 }

@@ -1,5 +1,7 @@
 import React, {useState, useRef} from 'react';
+
 import Switches from '../components/switches.jsx'
+import Center from '../components/center.jsx'
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -31,6 +33,7 @@ function App() {
 
       <main>
 
+        {position === 'center' && <Center/>}
       </main>
     </div>
   );

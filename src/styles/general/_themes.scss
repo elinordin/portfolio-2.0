@@ -1,11 +1,21 @@
 
-.dark-center, .dark-right, .dark-left {color: $white}
+.dark-center, .dark-right, .dark-left {
+    color: $white;
+    .arrow {
+        path {fill: $white-glass}
+    }
+}
 
 .dark-center {background: radial-gradient($centeredRadial,$darkmode-radial)}
 .dark-right {background: radial-gradient($rightRadial,$darkmode-radial)}
 .dark-left {background: radial-gradient($leftRadial,$darkmode-radial)}
 
-.light-center, .light-right, .light-left {color: $black}
+.light-center, .light-right, .light-left {
+    color: $black;
+    .arrow {
+        path {fill: $black}
+    }
+}
   
 .light-center {background: radial-gradient($centeredRadial,$lightmode-radial)}
 .light-right {background: radial-gradient($rightRadial,$lightmode-radial)}
