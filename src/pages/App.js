@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 
 import Switches from '../components/switches.jsx'
 import Center from '../components/center.jsx'
@@ -22,7 +22,7 @@ function App() {
   
 
   return (
-    <div id="app" className={theme + '-' + position}>
+    <div id="app" className={theme + ' ' + position}>
       <header className="App-header">
         <div>
           <h1>Elin Nordin</h1>

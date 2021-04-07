@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import bulbOff from '../assets/icons/bulb-off.svg';
 import bulbOn from '../assets/icons/bulb-on.svg';
@@ -6,14 +6,20 @@ import musicOff from '../assets/icons/music-off.svg';
 import musicOn from '../assets/icons/music-on.svg';
 
 function Switch(props) {
+    const [isOn, setIsOn] = useState(props.theme === 'light'? true: false)
+
+    const toggle = () => {
+        setIsOn(!isOn)
+        props.toggleSwitch(props.type)
+    }
 
     return (
-        <div className={props.theme === 'light' || props.music === 'on' ? 'switch-background switch-on' : 'switch-background switch-off'} onClick={() => props.toggleSwitch(props.type)}>
-            {props.type === 'music' && <p>{props.music === 'on'? 'ON' : 'OFF'}</p>}
-            {props.type === 'theme' && <p>{props.theme === 'light' ? 'LIGHT' : 'DARK'}</p>}
-            {props.type === 'music' && <img alt='music icon' src={props.music === 'on'? musicOn : musicOff}/>}
-            {props.type === 'theme' && <img alt='lightbulb icon' src={props.theme === 'light' ? bulbOn: bulbOff}/>}
-        </div>
+        <button type='button' role='switch' aria-checked={isOn} onClick={() => toggle()}>
+            {props.type === 'music' && <span className='text'>{props.music === 'on'? 'ON' : 'OFF'}</span>}
+            {props.type === 'theme' && <span className='text'>{props.theme === 'light' ? 'LIGHT' : 'DARK'}</span>}
+            {props.type === 'music' && <img className='slider' alt='music icon' src={props.music === 'on'? musicOn : musicOff}/>}
+            {props.type === 'theme' && <img className='slider' alt='lightbulb icon' src={props.theme === 'light' ? bulbOn: bulbOff}/>}
+        </button>
     );
 }
 
