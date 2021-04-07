@@ -23,6 +23,7 @@ h4 {font-size: $heading-s}
 p {font-size: $paragraph-m}
 
 button {
+  cursor: pointer;
   &:focus{outline: thin dotted;}
 }
 

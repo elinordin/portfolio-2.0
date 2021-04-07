@@ -38,6 +38,10 @@ p {
   font-size: 1.125rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 button:focus {
   outline: thin dotted;
 }
@@ -75,11 +79,11 @@ main {
 }
 
 .left {
-  background-position: right;
+  background-position: left;
 }
 
 .right {
-  background-position: left;
+  background-position: right;
 }
 
 #app {
@@ -207,6 +211,12 @@ main {
           box-shadow: 0px 0px 10px 10px #202020;
 }
 
+.nav-button {
+  background-color: transparent;
+  border: none;
+  margin: 10rem;
+}
+
 .nav-arrow-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,8 +224,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100%;
 }
 /*# sourceMappingURL=main.css.map */

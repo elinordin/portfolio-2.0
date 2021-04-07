@@ -21,6 +21,10 @@ function App() {
       else if (music === 'off') {setMusic('on')}
     }
   }
+
+  const navigate = (direction) => {
+    setPosition(direction)
+  }
   
 
   return (
@@ -35,7 +39,7 @@ function App() {
 
       <main>
         <Brain/>
-        {position === 'center' && <NavigationArrows/>}
+        {position === 'center' && <NavigationArrows navigate={navigate}/>}
       </main>
     </div>
   );
