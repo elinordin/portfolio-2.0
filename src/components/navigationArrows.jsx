@@ -10,22 +10,22 @@ function NavigationArrows(props) {
         <div className='nav-arrow-container'>
             <button 
             type='button' 
-            ariaLabel='Go to portfolio' 
+            aria-label='Go to portfolio' 
             className='nav-button' 
             onMouseEnter={() => props.navigate('left')} 
             onClick={() => props.navigate('left')}
             >
-                <ChevronLeft className='arrow'/>
+                <ChevronLeft className='arrow left-arrow'/>
             </button>
 
             <button 
             type='button' 
-            ariaLabel='Go to about me' 
+            aria-label='Go to about me' 
             className='nav-button' 
             onMouseEnter={() => props.navigate('right')} 
             onClick={() => props.navigate('right')}
             >
-                <ChevronRight className='arrow'/>
+                <ChevronRight className='arrow right-arrow'/>
             </button>
         </div>
     );
