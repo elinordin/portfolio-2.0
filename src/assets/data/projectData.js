@@ -1,4 +1,4 @@
-export default projects = [
+const projects = [
     {
         title: 'Internago',
         image: '../assets/graphics/internago.png',
@@ -44,5 +44,7 @@ export default projects = [
         techStack: ['Figma', 'JavaScript', 'CSS'],
         readMe: 'https://github.com/elinordin/Habit-tracker/blob/main/README.md',
         url: 'https://elinordin.github.io/habit-tracker/'
-    },
+    }
 ]
+
+export default projects;
