@@ -181,9 +181,6 @@ main {
 .brain-wrapper {
   height: 100%;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,13 +191,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
-.brain-img {
-  max-height: 450px;
+.brain-wrapper .brain-img {
+  max-height: 470px;
 }
 
-.brain-shadow {
+.brain-wrapper .brain-shadow {
   margin-top: 30px;
   background-color: #323232;
   opacity: 0.1;
@@ -209,6 +208,24 @@ main {
   border-radius: 100%;
   -webkit-box-shadow: 0px 0px 10px 10px #202020;
           box-shadow: 0px 0px 10px 10px #202020;
+}
+
+.brain-center {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.brain-left {
+  left: 100%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.brain-right {
+  left: 0%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .nav-button {
