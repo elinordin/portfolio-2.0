@@ -38,44 +38,52 @@ p {
   font-size: 1.125rem;
 }
 
-.dark-center, .dark-right, .dark-left {
-  color: #FCFCFC;
+button {
+  cursor: pointer;
 }
 
-.dark-center .arrow path, .dark-right .arrow path, .dark-left .arrow path {
+button:focus {
+  outline: thin dotted;
+}
+
+main {
+  position: relative;
+}
+
+.dark {
+  background: radial-gradient(ellipse at bottom, #272E3D, #3B7B80);
+  background-size: 400%;
+  color: #FCFCFC;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.dark .arrow path {
   fill: rgba(255, 255, 255, 0.7);
 }
 
-.dark-center {
-  background: radial-gradient(100% 100% at 50% 100%, #272E3D 0%, #3B7B80 100%);
-}
-
-.dark-right {
-  background: radial-gradient(100% 197.75% at 0% 100%, #272E3D 0%, #3B7B80 100%);
-}
-
-.dark-left {
-  background: radial-gradient(100% 197.75% at 100% 100%, #272E3D 0%, #3B7B80 100%);
-}
-
-.light-center, .light-right, .light-left {
+.light {
+  background: radial-gradient(ellipse at bottom, #E2E2E2, #FFFFFF);
+  background-size: 400%;
   color: #323232;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
-.light-center .arrow path, .light-right .arrow path, .light-left .arrow path {
+.light .arrow path {
   fill: #323232;
 }
 
-.light-center {
-  background: radial-gradient(100% 100% at 50% 100%, #E2E2E2 0%, #FFFFFF 100%);
+.center {
+  background-position: center;
 }
 
-.light-right {
-  background: radial-gradient(100% 197.75% at 0% 100%, #E2E2E2 0%, #FFFFFF 100%);
+.left {
+  background-position: left;
 }
 
-.light-left {
-  background: radial-gradient(100% 197.75% at 100% 100%, #E2E2E2 0%, #FFFFFF 100%);
+.right {
+  background-position: right;
 }
 
 #app {
@@ -120,72 +128,62 @@ p {
           justify-content: space-evenly;
 }
 
-.switch-background {
+[role='switch'] {
+  width: 80px;
+  height: 30px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 2px;
+  position: relative;
   border-radius: 50px;
-  width: 80px;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#0051A3), color-stop(#009EFF), color-stop(#FDD961), to(#FEB02B));
+  background: linear-gradient(to right, #0051A3, #009EFF, #FDD961, #FEB02B);
+  background-size: 400%;
+  background-position: left;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
-.switch-background p {
+[role='switch'] .text {
   font-size: 0.75rem;
+  position: absolute;
+  left: 8px;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.switch-background img {
-  height: 25px;
+[role='switch'] .slider {
+  height: 26px;
+  position: absolute;
+  cursor: pointer;
+  right: 2px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
-.switch-on {
-  background: -webkit-gradient(linear, right top, left top, from(#FDD961), to(#FEB02B));
-  background: linear-gradient(270deg, #FDD961 0%, #FEB02B 100%);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+[role='switch'][aria-checked='true'] {
+  background-position: right;
 }
 
-.switch-on p {
-  margin-left: 10px;
-  margin-right: 7px;
+[role='switch'][aria-checked='true'] .text {
+  right: 8px;
+  left: auto;
 }
 
-.switch-off {
-  background: -webkit-gradient(linear, right top, left top, from(#009EFF), to(#0051A3));
-  background: linear-gradient(270deg, #009EFF 0%, #0051A3 100%);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.switch-off p {
-  margin-left: 7px;
-  margin-right: 10px;
-}
-
-.center-main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 100%;
+[role='switch'][aria-checked='true'] .slider {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .brain-wrapper {
   height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: unset;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,13 +194,15 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
-.brain-img {
-  max-height: 450px;
+.brain-wrapper .brain-img {
+  max-height: 470px;
 }
 
-.brain-shadow {
+.brain-wrapper .brain-shadow {
   margin-top: 30px;
   background-color: #323232;
   opacity: 0.1;
@@ -211,5 +211,111 @@ p {
   border-radius: 100%;
   -webkit-box-shadow: 0px 0px 10px 10px #202020;
           box-shadow: 0px 0px 10px 10px #202020;
+}
+
+.brain-center {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.brain-left {
+  left: 100%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.brain-right {
+  left: 0%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  margin: 10rem;
+}
+
+.nav-arrow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.arrow {
+  position: relative;
+}
+
+.arrow path {
+  -webkit-transition: 1.2s ease-in;
+  transition: 1.2s ease-in;
+}
+
+.left-arrow {
+  animation: pulseLeft 1s ease infinite alternate-reverse;
+}
+
+.right-arrow {
+  animation: pulseRight 1s ease infinite alternate-reverse;
+}
+
+@-webkit-keyframes pulseLeft {
+  from {
+    left: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    left: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@keyframes pulseLeft {
+  from {
+    left: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    left: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@-webkit-keyframes pulseRight {
+  from {
+    right: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    right: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@keyframes pulseRight {
+  from {
+    right: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    right: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -21,3 +21,12 @@ h2 {font-size: $heading-l; font-weight: normal;}
 h3 {font-size: $heading-m}
 h4 {font-size: $heading-s}
 p {font-size: $paragraph-m}
+
+button {
+  cursor: pointer;
+  &:focus{outline: thin dotted;}
+}
+
+main {
+  position: relative;
+}

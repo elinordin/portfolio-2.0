@@ -1,0 +1,48 @@
+.nav-button {
+    background-color: transparent;
+    border: none;
+    margin: 10rem;
+}
+
+.nav-arrow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.arrow {
+    position: relative;
+    path {
+        transition: 1.2s ease-in;
+    }
+}
+
+.left-arrow {animation: pulseLeft 1s ease infinite alternate-reverse}
+.right-arrow {animation: pulseRight 1s ease infinite alternate-reverse}
+
+@keyframes pulseLeft {
+    from {
+        left: 0;
+        height: 5.75rem;
+        width: 5.75rem;
+    }
+    to {
+        left: 10px;
+        height: 6.25rem;
+        width: 6.25rem;
+    }
+}
+
+@keyframes pulseRight {
+    from {
+        right: 0;
+        height: 5.75rem;
+        width: 5.75rem;
+    }
+    to {
+        right: 10px;
+        height: 6.25rem;
+        width: 6.25rem;
+    }
+}

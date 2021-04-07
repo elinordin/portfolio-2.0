@@ -1,22 +1,24 @@
-
-.dark-center, .dark-right, .dark-left {
+.dark {
+    background: $darkmode;
+    background-size: 400%;
     color: $white;
+    transition: 1s ease;
     .arrow {
         path {fill: $white-glass}
     }
 }
 
-.dark-center {background: radial-gradient($centeredRadial,$darkmode-radial)}
-.dark-right {background: radial-gradient($rightRadial,$darkmode-radial)}
-.dark-left {background: radial-gradient($leftRadial,$darkmode-radial)}
-
-.light-center, .light-right, .light-left {
+.light {
+    background: $lightmode;
+    background-size: 400%;
     color: $black;
+    transition: 1s ease;
     .arrow {
         path {fill: $black}
     }
 }
-  
-.light-center {background: radial-gradient($centeredRadial,$lightmode-radial)}
-.light-right {background: radial-gradient($rightRadial,$lightmode-radial)}
-.light-left {background: radial-gradient($leftRadial,$lightmode-radial)}
+
+
+.center {background-position: center}
+.left {background-position: left}
+.right {background-position: right}

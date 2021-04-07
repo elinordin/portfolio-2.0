@@ -1,0 +1,39 @@
+.brain-wrapper {
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: unset;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s ease;
+    .brain-img {
+        max-height: 470px;
+    }
+        
+    .brain-shadow {
+        margin-top: 30px;
+        background-color: $black;
+        opacity: 0.1;
+        width: 280px;
+        height: 35px;
+        border-radius: 100%;
+        box-shadow: 0px 0px 10px 10px rgba(32, 32, 32, 20);
+    }
+}
+
+.brain-center {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.brain-left {
+    left: 100%;
+    transform: translate(-50%, 0);
+}
+
+.brain-right {
+    left: 0%;
+    transform: translate(-50%, 0);
+}

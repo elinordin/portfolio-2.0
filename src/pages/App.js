@@ -1,7 +1,9 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 
 import Switches from '../components/switches.jsx'
-import Center from '../components/center.jsx'
+import Brain from '../components/brain.jsx'
+import NavigationArrows from '../components/navigationArrows.jsx'
+
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -19,10 +21,14 @@ function App() {
       else if (music === 'off') {setMusic('on')}
     }
   }
+
+  const navigate = (direction) => {
+    setPosition(direction)
+  }
   
 
   return (
-    <div id="app" className={theme + '-' + position}>
+    <div id="app" className={theme + ' ' + position}>
       <header className="App-header">
         <div>
           <h1>Elin Nordin</h1>
@@ -32,8 +38,8 @@ function App() {
       </header>
 
       <main>
-
-        {position === 'center' && <Center/>}
+        <Brain position={position} navigate={navigate}/>
+        {position === 'center' && <NavigationArrows navigate={navigate}/>}
       </main>
     </div>
   );
