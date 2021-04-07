@@ -25,3 +25,7 @@ p {font-size: $paragraph-m}
 button {
   &:focus{outline: thin dotted;}
 }
+
+main {
+  position: relative;
+}

@@ -42,6 +42,10 @@ button:focus {
   outline: thin dotted;
 }
 
+main {
+  position: relative;
+}
+
 .dark {
   background: radial-gradient(ellipse at bottom, #272E3D, #3B7B80);
   background-size: 400%;
@@ -170,20 +174,12 @@ button:focus {
           transform: translateX(-50px);
 }
 
-.center-main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 100%;
-}
-
 .brain-wrapper {
   height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,5 +205,17 @@ button:focus {
   border-radius: 100%;
   -webkit-box-shadow: 0px 0px 10px 10px #202020;
           box-shadow: 0px 0px 10px 10px #202020;
+}
+
+.nav-arrow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,22 +1,18 @@
-.center-main-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-}
-
 .brain-wrapper {
     height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.brain-img {
+  }
+  
+  .brain-img {
     max-height: 450px;
-}
- 
-.brain-shadow {
+  }
+  
+  .brain-shadow {
     margin-top: 30px;
     background-color: $black;
     opacity: 0.1;
@@ -24,4 +20,4 @@
     height: 35px;
     border-radius: 100%;
     box-shadow: 0px 0px 10px 10px rgba(32, 32, 32, 20);
-}
+  }

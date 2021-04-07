@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 
 import Switches from '../components/switches.jsx'
-import Center from '../components/center.jsx'
+import Brain from '../components/brain.jsx'
+import NavigationArrows from '../components/navigationArrows.jsx'
+
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -32,8 +34,8 @@ function App() {
       </header>
 
       <main>
-
-        {position === 'center' && <Center/>}
+        <Brain/>
+        {position === 'center' && <NavigationArrows/>}
       </main>
     </div>
   );
