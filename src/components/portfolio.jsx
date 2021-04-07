@@ -4,11 +4,9 @@ import projects from '../assets/data/projectData'
 
 function Portfolio() {
     return (
-        <div>
-            <ul className='portfolio-grid'>
-                {projects.map((project) => <PortfolioListItem project={project}/>)}
-            </ul>
-        </div>
+        <ul className='portfolio-grid'>
+            {projects.map((project) => <PortfolioListItem project={project}/>)}
+        </ul>
     );
 }
 

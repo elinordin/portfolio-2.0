@@ -1,0 +1,20 @@
+.portfolio-grid{
+    margin-top: 1rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px,270px));
+    grid-template-rows: repeat(3, minmax(140px,250px));
+   
+    .box{
+        overflow: hidden;
+    }
+    .info-wrapper {
+        visibility: hidden;
+        position: absolute;
+    }
+    img {
+        height: 100%;
+        filter: saturate(70%);
+    }
+}
+

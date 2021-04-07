@@ -99,7 +99,7 @@ main {
 }
 
 #app header {
-  padding: 3% 8%;
+  padding: 2.5% 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,5 +317,31 @@ main {
     height: 6.25rem;
     width: 6.25rem;
   }
+}
+
+.portfolio-grid {
+  margin-top: 1rem;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 270px))[3];
+      grid-template-columns: repeat(3, minmax(150px, 270px));
+  -ms-grid-rows: (minmax(140px, 250px))[3];
+      grid-template-rows: repeat(3, minmax(140px, 250px));
+}
+
+.portfolio-grid .box {
+  overflow: hidden;
+}
+
+.portfolio-grid .info-wrapper {
+  visibility: hidden;
+  position: absolute;
+}
+
+.portfolio-grid img {
+  height: 100%;
+  -webkit-filter: saturate(70%);
+          filter: saturate(70%);
 }
 /*# sourceMappingURL=main.css.map */
