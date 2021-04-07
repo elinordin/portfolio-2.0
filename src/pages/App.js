@@ -38,7 +38,7 @@ function App() {
       </header>
 
       <main>
-        <Brain position={position}/>
+        <Brain position={position} navigate={navigate}/>
         {position === 'center' && <NavigationArrows navigate={navigate}/>}
       </main>
     </div>
