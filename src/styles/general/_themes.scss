@@ -1,6 +1,6 @@
 .dark {
     background: $darkmode;
-    background-size: 400%;
+    background-size: 200%;
     color: $white;
     transition: 1s ease;
     .arrow {
@@ -8,7 +8,7 @@
     }
     .portfolio-grid{
         .links {
-            background: linear-gradient($warm-gradient);
+            background: $lightmode;
             a {
                 color: $black;
             }
