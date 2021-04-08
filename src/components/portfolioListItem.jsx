@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function PortfolioListItem(props) {
+    const [style, setStyle] = useState({opacity: 0})
 
     return (
-        <li className='box'>
-            <div className='info-wrapper'>
+        <li className='box' 
+            onMouseEnter={() => setStyle({opacity: 1})} 
+            onMouseLeave={() => setStyle({opacity: 0})}
+            onClick={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})} 
+        >
+            <div className='info-wrapper' style={style}>
                 <div className='text'>
                     <h3 className='title'>{props.project.title}</h3>
                     <p>{props.project.bullets}</p>
