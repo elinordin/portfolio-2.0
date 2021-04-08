@@ -6,6 +6,14 @@
     .arrow {
         path {fill: $white-glass}
     }
+    .portfolio-grid{
+        .links {
+            background: linear-gradient($warm-gradient);
+            a {
+                color: $black;
+            }
+        }
+    }
 }
 
 .light {
@@ -15,6 +23,14 @@
     transition: 1s ease;
     .arrow {
         path {fill: $black}
+    }
+    .portfolio-grid{
+        .links {
+            background: $darkmode;
+            a {
+                color: $white;
+            }
+        }
     }
 }
 

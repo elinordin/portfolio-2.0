@@ -59,7 +59,16 @@ main {
 }
 
 .dark .arrow path {
-  fill: rgba(255, 255, 255, 0.7);
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.dark .portfolio-grid .links {
+  background: -webkit-gradient(linear, left top, right top, from(#FDD961), to(#FEB02B));
+  background: linear-gradient(to right, #FDD961, #FEB02B);
+}
+
+.dark .portfolio-grid .links a {
+  color: #323232;
 }
 
 .light {
@@ -72,6 +81,14 @@ main {
 
 .light .arrow path {
   fill: #323232;
+}
+
+.light .portfolio-grid .links {
+  background: radial-gradient(ellipse at bottom, #272E3D, #3B7B80);
+}
+
+.light .portfolio-grid .links a {
+  color: #FCFCFC;
 }
 
 .center {
@@ -152,7 +169,7 @@ main {
   font-size: 0.75rem;
   position: absolute;
   left: 8px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 [role='switch'] .slider {
@@ -336,10 +353,44 @@ main {
 }
 
 .portfolio-grid .info-wrapper {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
+  z-index: 1;
   width: 100%;
   height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #323232;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portfolio-grid .info-wrapper .text {
+  padding: 8%;
+}
+
+.portfolio-grid .info-wrapper .title {
+  margin-bottom: 1rem;
+}
+
+.portfolio-grid .info-wrapper .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4% 8%;
 }
 
 .portfolio-grid img {

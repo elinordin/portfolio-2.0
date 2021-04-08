@@ -1,16 +1,19 @@
 import React from 'react';
 
 function PortfolioListItem(props) {
+
     return (
         <li className='box'>
             <div className='info-wrapper'>
-                <h3>{props.project.title}</h3>
-                <h4>What I did</h4>
-                <p>{props.project.whatIDid}</p>
-                <h4>Tech Stack</h4>
-                <p>{props.project.techStack}</p>
-                <a href={props.project.readMe}>Read more</a>
-                <a href={props.project.url}>Go to site</a>
+                <div className='text'>
+                    <h3 className='title'>{props.project.title}</h3>
+                    <p>{props.project.bullets}</p>
+                </div>
+
+                <div className='links'>
+                    <a href={props.project.readMe}>Read more</a>
+                    {props.project.hasOwnProperty('url') && <a href={props.project.url}>Go to site</a>}
+                </div>
             </div>
             <img src={props.project.image} alt={props.project.alt}></img>
         </li>
