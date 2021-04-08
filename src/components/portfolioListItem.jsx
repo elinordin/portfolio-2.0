@@ -7,6 +7,8 @@ function PortfolioListItem(props) {
         <li className='box' 
             onMouseEnter={() => setStyle({opacity: 1})} 
             onMouseLeave={() => setStyle({opacity: 0})}
+            onFocus={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})}
+            onBlur={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})}
             onClick={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})} 
         >
             <div className='info-wrapper' style={style}>
