@@ -9,8 +9,8 @@ function PortfolioListItem(props) {
                 <p>{props.project.whatIDid}</p>
                 <h4>Tech Stack</h4>
                 <p>{props.project.techStack}</p>
-                <a src={props.project.readMe}>Read more</a>
-                <a src={props.project.url}>Go to site</a>
+                <a href={props.project.readMe}>Read more</a>
+                <a href={props.project.url}>Go to site</a>
             </div>
             <img src={props.project.image} alt={props.project.alt}></img>
         </li>

@@ -324,24 +324,28 @@ main {
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(150px, 270px))[3];
-      grid-template-columns: repeat(3, minmax(150px, 270px));
-  -ms-grid-rows: (minmax(140px, 250px))[3];
-      grid-template-rows: repeat(3, minmax(140px, 250px));
+  max-width: 55%;
+  -ms-grid-columns: (minmax(150px, 33%))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 33%));
+  grid-auto-rows: auto;
 }
 
 .portfolio-grid .box {
   overflow: hidden;
+  position: relative;
 }
 
 .portfolio-grid .info-wrapper {
   visibility: hidden;
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .portfolio-grid img {
   height: 100%;
-  -webkit-filter: saturate(70%);
-          filter: saturate(70%);
+  width: 100%;
+  -webkit-filter: saturate(50%);
+          filter: saturate(50%);
 }
 /*# sourceMappingURL=main.css.map */
