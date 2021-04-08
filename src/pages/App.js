@@ -5,12 +5,14 @@ import Brain from '../components/brain.jsx'
 import NavigationArrows from '../components/navigationArrows.jsx'
 import Portfolio from '../components/portfolio.jsx'
 
+import getLanguages from '../assets/data/languages'
+
+getLanguages()
 
 function App() {
   const [theme, setTheme] = useState('light')
   const [music, setMusic] = useState('off')
   const [position, setPosition] = useState('center')
-
 
   const toggleSwitch = (switchType) => {
     if (switchType === 'theme'){
