@@ -1,15 +1,26 @@
 class Language {
   constructor(language, bytes, color) {
-    this.language = language;
-    this.bytes = bytes;
+    this.language = language
+    this.bytes = bytes
     this.color = color
   }
 }
+
+class LanguageData {
+  constructor(language, percent, color) {
+    this.id = language
+    this.label = language
+    this.value = percent
+    this.color = color
+  }
+}
+
 
 const fetchRepos = async () => {
   const repoResp = await fetch('https://api.github.com/users/elinordin/repos').then(res => res.json())
   return repoResp
 }
+
 
 const fetchLanguages = async (repos) => {
   try {
@@ -66,7 +77,7 @@ const convertToPercent = (languagesInBytes) => {
 }
 
 
-function checkForOther(languagesInPercent) {
+const checkForOther = (languagesInPercent) => {
   let sumOfOther = 0;
 
   let sumFunction = (total, currentLanguage) => {
@@ -84,11 +95,23 @@ function checkForOther(languagesInPercent) {
 }
 
 
+const deconstructArray = (languagesWithOther) => {
+  let languageData = []
+
+  languagesWithOther.forEach((language) => {
+    languageData.push(new LanguageData(language.language, language.bytes, language.color))
+  })
+
+  return languageData
+}
+
+
 const getLanguages = async () => {
   const repos = await fetchRepos()
   const languagesInBytes = await fetchLanguages(repos)
   const languagesInPercent = convertToPercent(languagesInBytes)
-  const languages = checkForOther(languagesInPercent)
+  const languagesWithOther = checkForOther(languagesInPercent)
+  const languages = deconstructArray(languagesWithOther)
   return languages
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Piechart from '../components/piechart.jsx'
 
 function PortfolioListItem(props) {
     const [style, setStyle] = useState({opacity: 0})
