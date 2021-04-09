@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
 
-import Switches from '../components/switches.jsx'
+import Header from '../components/header.jsx'
 import Brain from '../components/brain.jsx'
 import NavigationArrows from '../components/navigationArrows.jsx'
 import Portfolio from '../components/portfolio.jsx'
+import About from '../components/about.jsx'
 
 
 function App() {
   const [theme, setTheme] = useState('light')
   const [music, setMusic] = useState('off')
-  const [position, setPosition] = useState('center')
+  const [position, setPosition] = useState('right')
 
   const toggleSwitch = (switchType) => {
     if (switchType === 'theme'){
@@ -29,18 +30,13 @@ function App() {
 
   return (
     <div id="app" className={theme + ' ' + position}>
-      <header className="App-header">
-        <div>
-          <h1>Elin Nordin</h1>
-          <h2>frontend developer</h2>
-        </div>
-        <Switches theme={theme} music={music} toggleSwitch={toggleSwitch}/>
-      </header>
+      <Header position={position} theme={theme} music={music} toggleSwitch={toggleSwitch}/>
 
       <main>
         <Brain position={position} navigate={navigate}/>
         {position === 'center' && <NavigationArrows navigate={navigate}/>}
         {position === 'left' && <Portfolio/>}
+        {position === 'right' && <About/>}
       </main>
     </div>
   );

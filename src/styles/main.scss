@@ -1,6 +1,6 @@
 // UTILITIES
 @import './utilities/variables';
-@import './utilities/mixins';
+@import './utilities/animations';
 
 // BASE
 @import './general/general';
@@ -10,7 +10,9 @@
 @import './pages/app';
 
 // COMPONENTS
+@import './components/header';
 @import './components/switches';
 @import './components/brain';
 @import './components/navigationArrows';
 @import './components/portfolio';
+@import './components/about';

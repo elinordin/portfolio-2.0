@@ -1,4 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap");
+@-webkit-keyframes pulseLeft {
+  from {
+    left: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    left: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+@keyframes pulseLeft {
+  from {
+    left: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    left: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@-webkit-keyframes pulseRight {
+  from {
+    right: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    right: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@keyframes pulseRight {
+  from {
+    right: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    right: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -70,6 +121,13 @@ main {
   color: #323232;
 }
 
+.dark .about .text span {
+  background: -webkit-gradient(linear, left top, right top, from(#FDD961), to(#FEB02B));
+  background: linear-gradient(to right, #FDD961, #FEB02B);
+  color: transparent;
+  background-clip: text;
+}
+
 .light {
   background: radial-gradient(ellipse at bottom, #cccccc, #FFFFFF);
   background-size: 400%;
@@ -88,6 +146,13 @@ main {
 
 .light .portfolio-grid .links a {
   color: #FCFCFC;
+}
+
+.light .about .text span {
+  background: -webkit-gradient(linear, left top, right top, from(#009EFF), to(#0051A3));
+  background: linear-gradient(to right, #009EFF, #0051A3);
+  color: transparent;
+  background-clip: text;
 }
 
 .center {
@@ -114,7 +179,14 @@ main {
   overflow: hidden;
 }
 
-#app header {
+#app main {
+  padding: 0 8%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+header {
   padding: 2.5% 8%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,11 +196,13 @@ main {
           justify-content: space-between;
 }
 
-#app main {
-  padding: 0 8%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+header .slide-out {
+  -webkit-animation: zoomOutUp 0.8s ease-out 1.2s forwards;
+          animation: zoomOutUp 0.8s ease-out 1.2s forwards;
+}
+
+header .hide {
+  display: none;
 }
 
 .switches-container {
@@ -283,58 +357,6 @@ main {
   animation: pulseRight 1s ease infinite alternate-reverse;
 }
 
-@-webkit-keyframes pulseLeft {
-  from {
-    left: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    left: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
-@keyframes pulseLeft {
-  from {
-    left: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    left: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
-@-webkit-keyframes pulseRight {
-  from {
-    right: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    right: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
-@keyframes pulseRight {
-  from {
-    right: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    right: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
 .portfolio-grid {
   margin-top: 1rem;
   list-style-type: none;
@@ -344,8 +366,8 @@ main {
   -ms-grid-columns: (minmax(150px, 33%))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(150px, 33%));
   grid-auto-rows: auto;
-  -webkit-animation: fadeIn 1s ease-in;
-          animation: fadeIn 1s ease-in;
+  -webkit-animation: fadeIn 0.5s ease-in 0.7s backwards;
+          animation: fadeIn 0.5s ease-in 0.7s backwards;
 }
 
 .portfolio-grid .box {
@@ -403,21 +425,26 @@ main {
           filter: saturate(50%);
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: to;
-  }
+.about {
+  height: 100%;
+  padding-left: 15%;
+  padding-top: 7%;
+  -webkit-animation: fadeIn 0.5s ease-in 0.7s backwards;
+          animation: fadeIn 0.5s ease-in 0.7s backwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: to;
-  }
+.about .text .slide-in {
+  display: inline-block;
+  -webkit-animation: backInDown 1.2s ease-out 1.8s backwards;
+          animation: backInDown 1.2s ease-out 1.8s backwards;
+}
+
+.about .text p {
+  max-width: 60ch;
+  margin: 1.2rem 0;
+}
+
+.about .text a {
+  margin-right: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

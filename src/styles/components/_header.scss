@@ -1,0 +1,13 @@
+header {
+    padding: 2.5% 8%;
+    display: flex;
+    justify-content: space-between;
+
+    .slide-out {
+        animation: zoomOutUp 0.8s ease-out 1.2s forwards;
+    }
+    .hide {
+        display: none;
+    }
+}
+

@@ -14,6 +14,15 @@
             }
         }
     }
+    .about {
+        .text{
+            span{
+                background: linear-gradient($warm-gradient);
+                color: transparent;
+                background-clip: text;
+            }
+        }
+    }
 }
 
 .light {
@@ -29,6 +38,15 @@
             background: $darkmode;
             a {
                 color: $white;
+            }
+        }
+    }
+    .about {
+        .text{
+            span{
+                background: linear-gradient($cold-gradient);
+                color: transparent;
+                background-clip: text;
             }
         }
     }
