@@ -70,6 +70,13 @@ main {
   color: #323232;
 }
 
+.dark .about .text span {
+  background: -webkit-gradient(linear, left top, right top, from(#FDD961), to(#FEB02B));
+  background: linear-gradient(to right, #FDD961, #FEB02B);
+  color: transparent;
+  background-clip: text;
+}
+
 .light {
   background: radial-gradient(ellipse at bottom, #cccccc, #FFFFFF);
   background-size: 400%;
@@ -88,6 +95,13 @@ main {
 
 .light .portfolio-grid .links a {
   color: #FCFCFC;
+}
+
+.light .about .text span {
+  background: -webkit-gradient(linear, left top, right top, from(#009EFF), to(#0051A3));
+  background: linear-gradient(to right, #009EFF, #0051A3);
+  color: transparent;
+  background-clip: text;
 }
 
 .center {
@@ -419,5 +433,16 @@ main {
   to {
     opacity: to;
   }
+}
+
+.about {
+  height: 100%;
+  padding-left: 15%;
+  padding-top: 7%;
+}
+
+.about .text p {
+  max-width: 60ch;
+  margin: 1.2rem 0;
 }
 /*# sourceMappingURL=main.css.map */
