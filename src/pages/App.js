@@ -3,13 +3,13 @@ import React, {useState} from 'react';
 import Switches from '../components/switches.jsx'
 import Brain from '../components/brain.jsx'
 import NavigationArrows from '../components/navigationArrows.jsx'
+import Portfolio from '../components/portfolio.jsx'
 
 
 function App() {
   const [theme, setTheme] = useState('light')
   const [music, setMusic] = useState('off')
   const [position, setPosition] = useState('center')
-
 
   const toggleSwitch = (switchType) => {
     if (switchType === 'theme'){
@@ -40,6 +40,7 @@ function App() {
       <main>
         <Brain position={position} navigate={navigate}/>
         {position === 'center' && <NavigationArrows navigate={navigate}/>}
+        {position === 'left' && <Portfolio/>}
       </main>
     </div>
   );

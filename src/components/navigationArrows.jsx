@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {ReactComponent as ChevronLeft} from '../assets/icons/chevron-left.svg'
 import {ReactComponent as ChevronRight} from '../assets/icons/chevron-right.svg'
