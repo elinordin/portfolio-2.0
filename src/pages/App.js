@@ -9,6 +9,7 @@ import getLanguages from '../assets/data/languages'
 
 getLanguages()
 
+
 function App() {
   const [theme, setTheme] = useState('light')
   const [music, setMusic] = useState('off')
