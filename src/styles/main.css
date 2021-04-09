@@ -377,6 +377,7 @@ main {
 
 .portfolio-grid .info-wrapper .text {
   padding: 8%;
+  padding-bottom: 0;
 }
 
 .portfolio-grid .info-wrapper .title {
