@@ -1,15 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap");
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}
-
 @-webkit-keyframes pulseLeft {
   from {
     left: 0;
@@ -22,7 +11,6 @@
     width: 6.25rem;
   }
 }
-
 @keyframes pulseLeft {
   from {
     left: 0;
@@ -59,32 +47,6 @@
     right: 10px;
     height: 6.25rem;
     width: 6.25rem;
-  }
-}
-
-@-webkit-keyframes slideIn {
-  from {
-    left: 100vw;
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  to {
-    left: 0px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    left: 100vw;
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  to {
-    left: 0px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
   }
 }
 
@@ -217,7 +179,14 @@ main {
   overflow: hidden;
 }
 
-#app header {
+#app main {
+  padding: 0 8%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+header {
   padding: 2.5% 8%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,11 +196,13 @@ main {
           justify-content: space-between;
 }
 
-#app main {
-  padding: 0 8%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+header .slide-out {
+  -webkit-animation: zoomOutUp 0.8s ease-out 1.2s forwards;
+          animation: zoomOutUp 0.8s ease-out 1.2s forwards;
+}
+
+header .hide {
+  display: none;
 }
 
 .switches-container {
@@ -395,8 +366,8 @@ main {
   -ms-grid-columns: (minmax(150px, 33%))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(150px, 33%));
   grid-auto-rows: auto;
-  -webkit-animation: fadeIn 1s ease-in;
-          animation: fadeIn 1s ease-in;
+  -webkit-animation: fadeIn 0.5s ease-in 0.7s backwards;
+          animation: fadeIn 0.5s ease-in 0.7s backwards;
 }
 
 .portfolio-grid .box {
@@ -458,12 +429,14 @@ main {
   height: 100%;
   padding-left: 15%;
   padding-top: 7%;
+  -webkit-animation: fadeIn 0.5s ease-in 0.7s backwards;
+          animation: fadeIn 0.5s ease-in 0.7s backwards;
 }
 
-.about .text .slideIn {
-  position: relative;
-  -webkit-animation: slideIn 2s ease-out;
-          animation: slideIn 2s ease-out;
+.about .text .slide-in {
+  display: inline-block;
+  -webkit-animation: backInDown 1.2s ease-out 1.8s backwards;
+          animation: backInDown 1.2s ease-out 1.8s backwards;
 }
 
 .about .text p {

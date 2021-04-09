@@ -5,7 +5,7 @@
     max-width: 55%;
     grid-template-columns: repeat(auto-fit, minmax(150px, 33%));
     grid-auto-rows:  auto;
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 0.5s ease-in 0.7s backwards;
    
     .box{
         overflow: hidden;

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import Switches from '../components/switches.jsx'
+import Header from '../components/header.jsx'
 import Brain from '../components/brain.jsx'
 import NavigationArrows from '../components/navigationArrows.jsx'
 import Portfolio from '../components/portfolio.jsx'
@@ -30,13 +30,7 @@ function App() {
 
   return (
     <div id="app" className={theme + ' ' + position}>
-      <header className="App-header">
-        <div>
-          <h1>Elin Nordin</h1>
-          <h2>frontend developer</h2>
-        </div>
-        <Switches theme={theme} music={music} toggleSwitch={toggleSwitch}/>
-      </header>
+      <Header position={position} theme={theme} music={music} toggleSwitch={toggleSwitch}/>
 
       <main>
         <Brain position={position} navigate={navigate}/>

@@ -2,11 +2,11 @@
     height: 100%;
     padding-left: 15%;
     padding-top: 7%;
-    //animation: fadeIn 2s ease-in;
+    animation: fadeIn 0.5s ease-in 0.7s backwards;
     .text{
-        .slideIn{
-            position: relative;
-            animation: slideIn 2s ease-out;
+        .slide-in{
+            display: inline-block;
+            animation: backInDown 1.2s ease-out 1.8s backwards;
         }
         p {
             max-width: 60ch;

@@ -9,8 +9,8 @@ function About() {
     return (
         <section className='about'>
             <div className='text'>
-                <h1>Hi there, I'm <span className='slideIn'>Elin Nordin</span></h1>
-                <p>I am a <span>creative problem solver</span> and <span className='slideIn'>frontend developer</span>. <br/>
+                <h1>Hi there, I'm <span className='slide-in'>Elin Nordin</span></h1>
+                <p>I am a <span>creative problem solver</span> and <span className='slide-in'>frontend developer</span>. <br/>
                 Make yourself at home and if you feel the urge to <span>explore</span> more of
                 my <span>brain</span>, <span>heart</span> or <span>soul</span>, reach out on the links below!</p>
 
