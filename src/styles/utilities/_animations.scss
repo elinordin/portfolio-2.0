@@ -1,0 +1,40 @@
+@keyframes fadeIn {
+    from {opacity: 0}
+}
+
+@keyframes pulseLeft {
+    from {
+        left: 0;
+        height: 5.75rem;
+        width: 5.75rem;
+    }
+    to {
+        left: 10px;
+        height: 6.25rem;
+        width: 6.25rem;
+    }
+}
+
+@keyframes pulseRight {
+    from {
+        right: 0;
+        height: 5.75rem;
+        width: 5.75rem;
+    }
+    to {
+        right: 10px;
+        height: 6.25rem;
+        width: 6.25rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        left: 100vw;
+        transform: rotate(20deg);
+    }
+    to {
+        left: 0px;
+        transform: rotate(0deg);
+    }
+}

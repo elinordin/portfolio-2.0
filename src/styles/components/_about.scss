@@ -2,10 +2,18 @@
     height: 100%;
     padding-left: 15%;
     padding-top: 7%;
+    //animation: fadeIn 2s ease-in;
     .text{
+        .slideIn{
+            position: relative;
+            animation: slideIn 2s ease-out;
+        }
         p {
             max-width: 60ch;
             margin: 1.2rem 0;
+        }
+        a {
+            margin-right: 0.5rem;
         }
     }
 }

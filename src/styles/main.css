@@ -1,4 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap");
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulseLeft {
+  from {
+    left: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    left: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@keyframes pulseLeft {
+  from {
+    left: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    left: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@-webkit-keyframes pulseRight {
+  from {
+    right: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    right: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@keyframes pulseRight {
+  from {
+    right: 0;
+    height: 5.75rem;
+    width: 5.75rem;
+  }
+  to {
+    right: 10px;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    left: 100vw;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  to {
+    left: 0px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    left: 100vw;
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  to {
+    left: 0px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -297,58 +386,6 @@ main {
   animation: pulseRight 1s ease infinite alternate-reverse;
 }
 
-@-webkit-keyframes pulseLeft {
-  from {
-    left: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    left: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
-@keyframes pulseLeft {
-  from {
-    left: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    left: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
-@-webkit-keyframes pulseRight {
-  from {
-    right: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    right: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
-@keyframes pulseRight {
-  from {
-    right: 0;
-    height: 5.75rem;
-    width: 5.75rem;
-  }
-  to {
-    right: 10px;
-    height: 6.25rem;
-    width: 6.25rem;
-  }
-}
-
 .portfolio-grid {
   margin-top: 1rem;
   list-style-type: none;
@@ -417,32 +454,24 @@ main {
           filter: saturate(50%);
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: to;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: to;
-  }
-}
-
 .about {
   height: 100%;
   padding-left: 15%;
   padding-top: 7%;
 }
 
+.about .text .slideIn {
+  position: relative;
+  -webkit-animation: slideIn 2s ease-out;
+          animation: slideIn 2s ease-out;
+}
+
 .about .text p {
   max-width: 60ch;
   margin: 1.2rem 0;
+}
+
+.about .text a {
+  margin-right: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */
