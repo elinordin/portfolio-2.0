@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Piechart from '../components/piechart.jsx'
 
 function PortfolioListItem(props) {
-    const [style, setStyle] = useState({opacity: 1})
+    const [style, setStyle] = useState({opacity: 0})
 
     return (
         <li className='box' 

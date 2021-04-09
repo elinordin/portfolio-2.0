@@ -5,6 +5,7 @@
     max-width: 55%;
     grid-template-columns: repeat(auto-fit, minmax(150px, 33%));
     grid-auto-rows:  auto;
+    animation: fadeIn 1s ease-in;
    
     .box{
         overflow: hidden;
@@ -41,6 +42,11 @@
         width: 100%;
         filter: saturate(50%);
     }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: to}
 }
 
 
