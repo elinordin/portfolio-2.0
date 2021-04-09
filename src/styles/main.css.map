@@ -12,7 +12,8 @@
         "components/_switches.scss",
         "components/_brain.scss",
         "components/_navigationArrows.scss",
-        "components/_portfolio.scss"
+        "components/_portfolio.scss",
+        "components/_about.scss"
     ],
     "names": [],
     "file": "main.css"
