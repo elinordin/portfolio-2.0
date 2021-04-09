@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import Piechart from '../components/piechart.jsx'
 
 function PortfolioListItem(props) {
-    const [style, setStyle] = useState({opacity: 0})
-
-    props.stats.length !== 0 && console.log(props.stats)
+    const [style, setStyle] = useState({opacity: 1})
 
     return (
         <li className='box' 
@@ -15,11 +13,15 @@ function PortfolioListItem(props) {
             onClick={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})} 
         >
             <div className='info-wrapper' style={style}>
+
+
                 <div className='text'>
                     <h3 className='title'>{props.project.title}</h3>
                     <p>{props.project.bullets}</p>
                 </div>
 
+                {props.project.title.includes('Github') && <Piechart data={props.stats}/>}
+                
                 <div className='links'>
                     <a href={props.project.readMe}>Read more</a>
                     {props.project.hasOwnProperty('url') && <a href={props.project.url}>Go to site</a>}

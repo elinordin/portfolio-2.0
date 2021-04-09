@@ -6,20 +6,21 @@ function Piechart({ data }) {
     return (
         <ResponsivePie
             data={data}
-            valueFormat=" > ,.0~%"
+            sortByValue={true}
+            height={100}
+            margin={{top:0, right:0, left:0, bottom:0}}
             startAngle={-180}
-            innerRadius={0.6}
+            innerRadius={0.35}
             padAngle={1}
-            colors={{ scheme: 'yellow_green_blue' }}
+            fit={false}
+            colors={{ datum: 'data.color' }}
             borderWidth={1}
             borderColor={{ from: 'color', modifiers: [['darker', '0.5']] }}
-            radialLabelsTextXOffset={4}
-            radialLabelsTextColor="#323232"
-            radialLabelsLinkDiagonalLength={11}
-            radialLabelsLinkHorizontalLength={20}
-            radialLabelsLinkStrokeWidth={2}
-            radialLabelsLinkColor={{ from: 'color' }}
-            sliceLabelsTextColor="#323232"
+            enableRadialLabels={false}
+            sliceLabel='id'
+            sliceLabelsRadiusOffset={0.5}
+            sliceLabelsSkipAngle={15}
+            sliceLabelsTextColor='#FFFFFF'
             legends={[]}
         />
     );
