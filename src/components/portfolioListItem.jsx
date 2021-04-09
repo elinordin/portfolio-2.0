@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 function PortfolioListItem(props) {
     const [style, setStyle] = useState({opacity: 0})
 
+    props.stats.length !== 0 && console.log(props.stats)
+
     return (
         <li className='box' 
             onMouseEnter={() => setStyle({opacity: 1})} 
