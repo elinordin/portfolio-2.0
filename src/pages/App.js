@@ -40,7 +40,7 @@ function App() {
 
 
   return (
-    <div id='app' className={theme + ' ' + position}>
+    <div id='app' className={`${theme} ${position}`}>
 
       <Header position={position} theme={theme} music={music} toggleSwitch={toggleSwitch} />
 
