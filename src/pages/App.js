@@ -12,7 +12,9 @@ import song from '../assets/music/background-sound.mp3'
 
 
 function App() {
-  const [theme, setTheme] = useState('light')
+  let lightmode = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+  const [theme, setTheme] = useState(lightmode? 'light': 'dark')
   const [music, setMusic] = useState('off')
   const [position, setPosition] = useState('center')
   const [play, { pause }] = useSound(song, {volume: 0.1});
