@@ -30,6 +30,12 @@
 }
 
 @keyframes brainShadow {
-    from {width: 280px}
-    to {width: 310px}
+    from {
+        width: 280px;
+        box-shadow: 0px 0px 5px 10px rgba(32, 32, 32, 20);
+    }
+    to {
+        width: 300px;
+        box-shadow: 0px 0px 10px 10px rgba(32, 32, 32, 20);
+    }
 }

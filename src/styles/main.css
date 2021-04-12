@@ -71,18 +71,26 @@
 @-webkit-keyframes brainShadow {
   from {
     width: 280px;
+    -webkit-box-shadow: 0px 0px 5px 10px #202020;
+            box-shadow: 0px 0px 5px 10px #202020;
   }
   to {
-    width: 310px;
+    width: 300px;
+    -webkit-box-shadow: 0px 0px 10px 10px #202020;
+            box-shadow: 0px 0px 10px 10px #202020;
   }
 }
 
 @keyframes brainShadow {
   from {
     width: 280px;
+    -webkit-box-shadow: 0px 0px 5px 10px #202020;
+            box-shadow: 0px 0px 5px 10px #202020;
   }
   to {
-    width: 310px;
+    width: 300px;
+    -webkit-box-shadow: 0px 0px 10px 10px #202020;
+            box-shadow: 0px 0px 10px 10px #202020;
   }
 }
 
@@ -331,13 +339,13 @@ header .hide {
 
 .brain-wrapper .brain-shadow {
   margin-top: 30px;
-  background-color: #323232;
-  opacity: 0.1;
+  background-color: black;
+  opacity: 0.08;
   width: 280px;
   height: 35px;
   border-radius: 100%;
-  -webkit-box-shadow: 0px 0px 20px 10px #202020;
-          box-shadow: 0px 0px 20px 10px #202020;
+  -webkit-box-shadow: 0px 0px 5px 10px #202020;
+          box-shadow: 0px 0px 5px 10px #202020;
 }
 
 .brain-center {
