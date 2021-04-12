@@ -13,7 +13,7 @@ function Piechart({ data }) {
             innerRadius={0.35}
             padAngle={1}
             fit={false}
-            colors={{ datum: 'data.color' }}
+            colors={{ scheme: 'purple_orange' }}
             borderWidth={1}
             borderColor={{ from: 'color', modifiers: [['darker', '0.5']] }}
             enableRadialLabels={false}
