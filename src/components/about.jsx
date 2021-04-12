@@ -14,10 +14,10 @@ function About() {
                 Make yourself at home and if you feel the urge to <span>explore</span> more of
                 my <span>brain</span>, <span>heart</span> or <span>soul</span>, reach out on the links below!</p>
 
-                <a href='mailto:elin.nordin@hyperisland.se' aria-label='Email me'><img src={mail}/></a>
-                <a href='https://github.com/elinordin' aria-label='Go to my github'><img src={github}/></a>
-                <a href='https://www.linkedin.com/in/elinordin/' aria-label='Go to my linkedin'><img src={linkedin}/></a>
-                <a href='' download="CV - Elin Nordin" aria-label='Download my CV'><img src={cv}/></a>
+                <a href='mailto:elin.nordin@hyperisland.se' aria-label='Email me'><img alt='Email icon' src={mail}/></a>
+                <a href='https://github.com/elinordin' aria-label='Go to my github'><img alt='Github icon' src={github}/></a>
+                <a href='https://www.linkedin.com/in/elinordin/' aria-label='Go to my linkedin'><img alt='Linkedin icon' src={linkedin}/></a>
+                <a href=' ' download="CV - Elin Nordin" aria-label='Download my CV'><img alt='Documents icon' src={cv}/></a>
             </div>
         </section>
     );
