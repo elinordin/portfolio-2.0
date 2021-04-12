@@ -23,3 +23,13 @@
         width: 6.25rem;
     }
 }
+
+@keyframes brainFly {
+    from {bottom: 0}
+    to {bottom: 10px}
+}
+
+@keyframes brainShadow {
+    from {width: 280px}
+    to {width: 310px}
+}
