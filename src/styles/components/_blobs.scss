@@ -8,8 +8,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 4vw;
         position: absolute;
+        transition: 1s ease;
         .blob-text{
             position: absolute;
             font-size: $paragraph-xs;
