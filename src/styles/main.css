@@ -482,10 +482,13 @@ header .hide {
 
 .about {
   height: 100%;
-  padding-left: 15%;
-  padding-top: 7%;
   -webkit-animation: fadeIn 0.5s ease-in 0.7s backwards;
           animation: fadeIn 0.5s ease-in 0.7s backwards;
+}
+
+.about .text {
+  padding-left: 15%;
+  padding-top: 7%;
 }
 
 .about .text .slide-in {
@@ -505,7 +508,9 @@ header .hide {
 
 .blob-list {
   list-style-type: none;
-  position: relative;
+  position: absolute;
+  top: 0;
+  height: 100%;
 }
 
 .blob-list .list-item {
@@ -519,5 +524,6 @@ header .hide {
       -ms-flex-align: center;
           align-items: center;
   width: 4vw;
+  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */

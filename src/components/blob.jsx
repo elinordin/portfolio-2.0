@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Blob(props) {
     const [isBlobHovered, setIsBlobHovered] = useState(false)
     return (
-        <li className='list-item'>
+        <li className='list-item' style={{top: props.interest.position}}>
             <svg 
             className='blob'
             fill={props.interest.fill} 
