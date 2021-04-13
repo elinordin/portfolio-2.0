@@ -1,0 +1,9 @@
+.blob-list {
+    list-style-type: none;
+    position: relative;
+
+    .blob {
+        display: inline-block;
+        border-radius: 100%;
+    }
+}

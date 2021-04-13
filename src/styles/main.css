@@ -502,4 +502,14 @@ header .hide {
 .about .text a {
   margin-right: 0.5rem;
 }
+
+.blob-list {
+  list-style-type: none;
+  position: relative;
+}
+
+.blob-list .blob {
+  display: inline-block;
+  border-radius: 100%;
+}
 /*# sourceMappingURL=main.css.map */

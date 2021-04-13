@@ -1,12 +1,14 @@
 import React from 'react';
 import interests from '../assets/data/interests.js'
 
+import Blob from '../components/blob'
+
 function Blobs() {
     console.log(interests)
     return (
-        <div>
-            <p>blobs</p>
-        </div>
+        <ul className='blob-list'>
+            {interests.map(interest => <Blob key={interest.key} interest={interest}/>)}
+        </ul>
     );
 }
 
