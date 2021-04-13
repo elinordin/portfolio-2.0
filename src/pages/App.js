@@ -17,7 +17,7 @@ function App() {
   const [theme, setTheme] = useState(lightmode? 'light': 'dark')
   const [music, setMusic] = useState('off')
   const [position, setPosition] = useState('center')
-  const [play, { pause }] = useSound(song, {volume: 0.1});
+  const [play, { pause }] = useSound(song, {volume: 0.1, loop: true});
 
   const toggleSwitch = (switchType) => {
     if (switchType === 'theme') {
