@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Blob(props) {
     const [isBlobHovered, setIsBlobHovered] = useState(false)
     return (
-        <li className='list-item' style={{top: props.interest.position}}>
+        <li className='list-item' style={{width: isBlobHovered? '10vw' : '1.5vw', top: props.interest.position}}>
             <svg 
             className='blob'
             fill={props.interest.fill} 
@@ -21,8 +21,9 @@ function Blob(props) {
                         M56.9,-66.8C72.7,-54.5,83.9,-35.6,86.8,-15.8C89.7,4,84.3,24.8,74,42.8C63.7,60.7,48.4,75.9,30.1,82.3C11.9,88.8,-9.4,86.6,-28.3,79.1C-47.1,71.6,-63.6,58.9,-74.1,42.1C-84.6,25.3,-89.1,4.4,-86.1,-15.7C-83.1,-35.7,-72.7,-54.9,-57.1,-67.3C-41.4,-79.6,-20.7,-85.1,-0.1,-85C20.5,-84.9,41,-79.1,56.9,-66.8Z;" 
                     />
                 </path>
-                <text x="50" y="100" fill="black">{isBlobHovered ? props.interest.interest : ' '}</text>
+                {/* <text x="30%" y="100" fill="black">{isBlobHovered ? props.interest.interest : ' '}</text> */}
             </svg>
+            <p className='blob-text'>{isBlobHovered ? props.interest.interest : ' '}</p>
         </li>
     );
 }

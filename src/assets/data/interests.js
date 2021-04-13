@@ -17,7 +17,7 @@ const interests = [
     },
     {
         key: '2',
-        interest: 'Bullet journal',
+        interest: 'Bullet journaling',
         fill: getRandomFill(),
         position: getRandomPosition(),
         speed: getRandomSpeed(),
