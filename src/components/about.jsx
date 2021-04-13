@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Blobs from '../components/blobs.jsx'
+
 import mail from '../assets/icons/mail.png'
 import github from '../assets/icons/github.png'
 import linkedin from '../assets/icons/linkedin.png'
@@ -19,6 +21,9 @@ function About() {
                 <a href='https://www.linkedin.com/in/elinordin/' aria-label='Go to my linkedin'><img alt='Linkedin icon' src={linkedin}/></a>
                 <a href=' ' download="CV - Elin Nordin" aria-label='Download my CV'><img alt='Documents icon' src={cv}/></a>
             </div>
+
+            <Blobs/>
+
         </section>
     );
 }
