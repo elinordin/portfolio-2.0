@@ -10,6 +10,7 @@
         align-items: center;
         position: absolute;
         transition: 1s ease;
+        transform: translateX(-50%) translateY(-50%);
         .blob-text{
             position: absolute;
             font-size: $paragraph-xs;
