@@ -6,7 +6,12 @@ function Blob(props) {
         <li className='blob' style={{
             backgroundColor: props.interest.fill,
             padding: props.interest.padding
-            }}>{isBlobHovered? props.interest.interest : ' '}</li>
+        }}
+        onMouseEnter={() => setIsBlobHovered(true)}
+        onMouseLeave={() => setIsBlobHovered(false)}
+        >
+            {isBlobHovered ? props.interest.interest : ' '}
+        </li>
     );
 }
 
