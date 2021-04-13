@@ -2,8 +2,10 @@
     list-style-type: none;
     position: relative;
 
-    .blob {
-        display: inline-block;
-        border-radius: 50px;
+    .list-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4vw;
     }
 }
