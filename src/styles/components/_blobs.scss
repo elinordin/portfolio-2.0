@@ -3,14 +3,16 @@
     position: absolute;
     top: 0;
     height: 100%;
+    width: 100%;
 
     .list-item{
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        transition: 1s ease;
+        transition: 0.5s ease;
         transform: translateX(-50%) translateY(-50%);
+        cursor: pointer;
         .blob-text{
             position: absolute;
             font-size: $paragraph-xs;

@@ -5,7 +5,12 @@ function Blob(props) {
     return (
         <li 
         className='list-item' 
-        style={{width: isBlobHovered? '7rem' : props.interest.size, top: props.interest.position}}            
+        style={{
+            width: isBlobHovered? '7rem' : props.interest.size, 
+            top: props.interest.position,
+            left: '0%',
+            animation: isBlobHovered? `blobs ${props.interest.moveSpeed} ease infinite paused` :  `blobs ${props.interest.moveSpeed} ease infinite running`
+        }}            
         onMouseEnter={() => setIsBlobHovered(true)}
         onMouseLeave={() => setIsBlobHovered(false)}
         >
@@ -16,7 +21,7 @@ function Blob(props) {
             xmlns="http://www.w3.org/2000/svg" 
             >
                 <path transform="translate(100 100)">
-                    <animate repeatCount="indefinite" attributeName="d" dur={props.interest.speed} values=
+                    <animate repeatCount="indefinite" attributeName="d" dur={props.interest.svgSpeed} values=
                         "M56.9,-66.8C72.7,-54.5,83.9,-35.6,86.8,-15.8C89.7,4,84.3,24.8,74,42.8C63.7,60.7,48.4,75.9,30.1,82.3C11.9,88.8,-9.4,86.6,-28.3,79.1C-47.1,71.6,-63.6,58.9,-74.1,42.1C-84.6,25.3,-89.1,4.4,-86.1,-15.7C-83.1,-35.7,-72.7,-54.9,-57.1,-67.3C-41.4,-79.6,-20.7,-85.1,-0.1,-85C20.5,-84.9,41,-79.1,56.9,-66.8Z; 
                         M49.5,-57.5C65,-45.9,79,-31.2,82.7,-14C86.4,3.1,79.8,22.7,69.9,40.9C60,59.1,46.9,76,29.1,84.5C11.3,93,-11.3,93.1,-30.5,85.4C-49.7,77.7,-65.4,62.3,-74.7,44.1C-84,26,-86.9,5.1,-84,-15.4C-81.1,-35.9,-72.5,-56,-57.5,-67.7C-42.6,-79.3,-21.3,-82.5,-2.2,-80C17,-77.4,33.9,-69,49.5,-57.5Z; 
                         M55.9,-64.5C71,-53.9,80.8,-34.9,81.9,-16.3C82.9,2.3,75.2,20.6,65.3,37.7C55.5,54.8,43.5,70.7,26.6,79.7C9.7,88.8,-12.1,91,-31.7,84.8C-51.4,78.7,-68.9,64.3,-78.5,46.1C-88.1,27.9,-89.8,5.9,-85.8,-14.9C-81.9,-35.6,-72.2,-55.1,-57,-65.7C-41.7,-76.4,-20.9,-78.2,-0.2,-77.9C20.4,-77.6,40.7,-75.2,55.9,-64.5Z;
