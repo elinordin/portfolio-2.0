@@ -5,7 +5,8 @@ const getRandomFill = () => {return fills[Math.floor(Math.random() * fills.lengt
 const getRandomSize = () => {return sizes[Math.floor(Math.random() * sizes.length)]}
 const getRandomPosition = () => {return Math.floor(Math.random() * 80) + '%'}
 const getRandomSvgSpeed = () => {return Math.floor((Math.random() * 6) + 1) + 's'}
-const getRandomMoveSpeed = () => {return Math.floor((Math.random() * 25) + 18) + 's'}
+const getRandomMoveSpeed = () => {return Math.floor((Math.random() * 25) + 20) + 's'}
+const getDelay = () => {return Math.floor(Math.random() * 4) + 's'}
 
 
 
@@ -18,6 +19,7 @@ const interests = [
         position: getRandomPosition(),
         svgSpeed: getRandomSvgSpeed(),
         moveSpeed: getRandomMoveSpeed(),
+        delay: getDelay(),
     },
     {
         key: '2',
@@ -27,6 +29,7 @@ const interests = [
         position: getRandomPosition(),
         svgSpeed: getRandomSvgSpeed(),
         moveSpeed: getRandomMoveSpeed(),
+        delay: getDelay(),
     },
     {
         key: '3',
@@ -36,6 +39,7 @@ const interests = [
         position: getRandomPosition(),
         svgSpeed: getRandomSvgSpeed(),
         moveSpeed: getRandomMoveSpeed(),
+        delay: getDelay(),
     },
     {
         key: '4',
@@ -45,6 +49,7 @@ const interests = [
         position: getRandomPosition(),
         svgSpeed: getRandomSvgSpeed(),
         moveSpeed: getRandomMoveSpeed(),
+        delay: getDelay(),
     },
     {
         key: '5',
@@ -54,6 +59,7 @@ const interests = [
         position: getRandomPosition(),
         svgSpeed: getRandomSvgSpeed(),
         moveSpeed: getRandomMoveSpeed(),
+        delay: getDelay(),
     },
 ]
 

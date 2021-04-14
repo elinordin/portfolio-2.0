@@ -9,7 +9,10 @@ function Blob(props) {
             width: isBlobHovered? '7rem' : props.interest.size, 
             top: props.interest.position,
             left: '0%',
-            animation: isBlobHovered? `blobs ${props.interest.moveSpeed} ease infinite paused` :  `blobs ${props.interest.moveSpeed} ease infinite running`
+            animation: isBlobHovered? 
+                `blobs ${props.interest.moveSpeed} ease ${props.interest.delay} infinite paused backwards` 
+                :  
+                `blobs ${props.interest.moveSpeed} ease ${props.interest.delay} infinite running backwards`
         }}            
         onMouseEnter={() => setIsBlobHovered(true)}
         onMouseLeave={() => setIsBlobHovered(false)}
