@@ -1,6 +1,6 @@
 const sizes = ['0.7rem', '0.8rem', '0.9rem', '1rem']
 const fills = ['#41A3EE', '#85E6D0', '#FEB943', '#FDD961']
-const opacity = '99'
+const opacity = 'B3'
 
 const getRandomFill = () => {return fills[Math.floor(Math.random() * fills.length)] + opacity}
 const getRandomSize = () => {return sizes[Math.floor(Math.random() * sizes.length)]}
