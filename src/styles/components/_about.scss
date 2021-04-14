@@ -17,6 +17,9 @@
         }
         a {
             margin-right: 0.5rem;
+            :hover{
+                animation: swing 1s ease;
+            }
         }
     }
 

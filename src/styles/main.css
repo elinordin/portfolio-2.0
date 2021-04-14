@@ -530,6 +530,11 @@ header .hide {
   margin-right: 0.5rem;
 }
 
+.about .text a :hover {
+  -webkit-animation: swing 1s ease;
+          animation: swing 1s ease;
+}
+
 .about .blob-list {
   list-style-type: none;
   position: absolute;
