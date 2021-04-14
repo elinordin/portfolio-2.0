@@ -5,7 +5,7 @@ function Blob(props) {
     return (
         <li 
         className='list-item' 
-        style={{width: isBlobHovered? '7rem' : '1rem', top: props.interest.position}}            
+        style={{width: isBlobHovered? '7rem' : props.interest.size, top: props.interest.position}}            
         onMouseEnter={() => setIsBlobHovered(true)}
         onMouseLeave={() => setIsBlobHovered(false)}
         >
