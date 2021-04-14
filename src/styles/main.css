@@ -94,6 +94,32 @@
   }
 }
 
+@-webkit-keyframes brainShadowMobile {
+  from {
+    width: 180px;
+    -webkit-box-shadow: 0px 0px 5px 10px #202020;
+            box-shadow: 0px 0px 5px 10px #202020;
+  }
+  to {
+    width: 230px;
+    -webkit-box-shadow: 0px 0px 10px 10px #202020;
+            box-shadow: 0px 0px 10px 10px #202020;
+  }
+}
+
+@keyframes brainShadowMobile {
+  from {
+    width: 180px;
+    -webkit-box-shadow: 0px 0px 5px 10px #202020;
+            box-shadow: 0px 0px 5px 10px #202020;
+  }
+  to {
+    width: 230px;
+    -webkit-box-shadow: 0px 0px 10px 10px #202020;
+            box-shadow: 0px 0px 10px 10px #202020;
+  }
+}
+
 @-webkit-keyframes blobs {
   from {
     left: -5%;
@@ -417,6 +443,17 @@ header .hide {
   left: 0%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .brain-wrapper .brain-img {
+    max-height: 300px;
+  }
+  .brain-wrapper .brain-shadow {
+    width: 180px;
+    -webkit-animation: brainShadowMobile 2s ease infinite alternate;
+            animation: brainShadowMobile 2s ease infinite alternate;
+  }
 }
 
 .nav-button {

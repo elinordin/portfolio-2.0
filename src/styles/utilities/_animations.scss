@@ -40,6 +40,17 @@
     }
 }
 
+@keyframes brainShadowMobile {
+    from {
+        width: 180px;
+        box-shadow: 0px 0px 5px 10px rgba(32, 32, 32, 20);
+    }
+    to {
+        width: 230px;
+        box-shadow: 0px 0px 10px 10px rgba(32, 32, 32, 20);
+    }
+}
+
 @keyframes blobs {
     from {left: -5%}
     to {left: 100%}

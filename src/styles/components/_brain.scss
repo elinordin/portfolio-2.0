@@ -33,7 +33,6 @@
     .brain-shadow {
         animation: brainShadow 2s ease infinite alternate;
     }
-
 }
 
 .brain-left {
@@ -44,4 +43,17 @@
 .brain-right {
     left: 0%;
     transform: translate(-50%, 0);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .brain-wrapper {
+        .brain-img {
+            max-height: 300px;
+        }     
+        .brain-shadow {
+            width: 180px;
+            animation: brainShadowMobile 2s ease infinite alternate;
+        }
+    }
 }
