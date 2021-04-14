@@ -95,12 +95,18 @@
 }
 
 @-webkit-keyframes blobs {
+  from {
+    left: -5%;
+  }
   to {
     left: 100%;
   }
 }
 
 @keyframes blobs {
+  from {
+    left: -5%;
+  }
   to {
     left: 100%;
   }
@@ -499,8 +505,13 @@ header .hide {
 }
 
 .about .text {
-  padding-left: 15%;
-  padding-top: 7%;
+  margin-left: 15%;
+  margin-top: 7%;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 2;
 }
 
 .about .text .slide-in {
@@ -518,7 +529,7 @@ header .hide {
   margin-right: 0.5rem;
 }
 
-.blob-list {
+.about .blob-list {
   list-style-type: none;
   position: absolute;
   top: 0;
@@ -526,7 +537,7 @@ header .hide {
   width: 100%;
 }
 
-.blob-list .list-item {
+.about .blob-list .list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -542,9 +553,10 @@ header .hide {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   cursor: pointer;
+  z-index: 0;
 }
 
-.blob-list .list-item .blob-text {
+.about .blob-list .list-item .blob-text {
   position: absolute;
   font-size: 0.75rem;
   color: #323232;

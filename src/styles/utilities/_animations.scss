@@ -41,7 +41,6 @@
 }
 
 @keyframes blobs {
-    to {
-        left: 100%;
-    }
+    from {left: -5%}
+    to {left: 100%}
 }

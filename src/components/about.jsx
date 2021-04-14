@@ -10,6 +10,7 @@ import cv from '../assets/icons/cv.png'
 function About() {
     return (
         <section className='about'>
+            <Blobs/>
             <div className='text'>
                 <h1>Hi there, I'm <span className='slide-in'>Elin Nordin</span></h1>
                 <p>I am a <span>creative problem solver</span> and <span className='slide-in'>frontend developer</span>. <br/>
@@ -20,9 +21,7 @@ function About() {
                 <a href='https://github.com/elinordin' aria-label='Go to my github'><img alt='Github icon' src={github}/></a>
                 <a href='https://www.linkedin.com/in/elinordin/' aria-label='Go to my linkedin'><img alt='Linkedin icon' src={linkedin}/></a>
                 <a href=' ' download="CV - Elin Nordin" aria-label='Download my CV'><img alt='Documents icon' src={cv}/></a>
-            </div>
-
-            <Blobs/>
+            </div>            
 
         </section>
     );
