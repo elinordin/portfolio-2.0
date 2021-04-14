@@ -1,7 +1,8 @@
 const sizes = ['0.7rem', '0.8rem', '0.9rem', '1rem']
 const fills = ['#41A3EE', '#85E6D0', '#FEB943', '#FDD961']
+const opacity = '99'
 
-const getRandomFill = () => {return fills[Math.floor(Math.random() * fills.length)]}
+const getRandomFill = () => {return fills[Math.floor(Math.random() * fills.length)] + opacity}
 const getRandomSize = () => {return sizes[Math.floor(Math.random() * sizes.length)]}
 const getRandomPosition = () => {return Math.floor(Math.random() * 80) + '%'}
 const getRandomSvgSpeed = () => {return Math.floor((Math.random() * 6) + 1) + 's'}
