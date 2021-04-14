@@ -50,6 +50,58 @@
   }
 }
 
+@-webkit-keyframes pulseLeftMobile {
+  from {
+    left: 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  to {
+    left: 5px;
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@keyframes pulseLeftMobile {
+  from {
+    left: 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  to {
+    left: 5px;
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@-webkit-keyframes pulseRightMobile {
+  from {
+    right: 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  to {
+    right: 5px;
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@keyframes pulseRightMobile {
+  from {
+    right: 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  to {
+    right: 5px;
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
 @-webkit-keyframes brainFly {
   from {
     bottom: 0;
@@ -296,7 +348,6 @@ header .hide {
 @media only screen and (max-width: 768px) {
   header {
     padding: 8%;
-    padding-bottom: 2.5%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -381,7 +432,6 @@ header .hide {
 }
 
 .brain-wrapper {
-  height: 100%;
   border: none;
   background-color: transparent;
   cursor: unset;
@@ -459,7 +509,6 @@ header .hide {
 .nav-button {
   background-color: transparent;
   border: none;
-  margin: 10rem;
 }
 
 .nav-arrow-container {
@@ -473,6 +522,8 @@ header .hide {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  width: 100%;
+  padding: 0 6rem;
 }
 
 .arrow {
@@ -490,6 +541,22 @@ header .hide {
 
 .right-arrow {
   animation: pulseRight 1s ease infinite alternate-reverse;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-arrow-container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+  .nav-arrow-container .left-arrow {
+    animation: pulseLeftMobile 1s ease infinite alternate-reverse;
+  }
+  .nav-arrow-container .right-arrow {
+    animation: pulseRightMobile 1s ease infinite alternate-reverse;
+  }
 }
 
 .portfolio-grid {

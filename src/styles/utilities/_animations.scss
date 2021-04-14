@@ -24,6 +24,32 @@
     }
 }
 
+@keyframes pulseLeftMobile {
+    from {
+        left: 0;
+        height: 4rem;
+        width: 4rem;
+    }
+    to {
+        left: 5px;
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+@keyframes pulseRightMobile {
+    from {
+        right: 0;
+        height: 4rem;
+        width: 4rem;
+    }
+    to {
+        right: 5px;
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
 @keyframes brainFly {
     from {bottom: 0}
     to {bottom: 10px}

@@ -1,7 +1,6 @@
 .nav-button {
     background-color: transparent;
     border: none;
-    margin: 10rem;
 }
 
 .nav-arrow-container {
@@ -9,6 +8,8 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
+    padding: 0 6rem;
 }
 
 .arrow {
@@ -20,3 +21,14 @@
 
 .left-arrow {animation: pulseLeft 1s ease infinite alternate-reverse}
 .right-arrow {animation: pulseRight 1s ease infinite alternate-reverse}
+
+@media only screen and (max-width: 768px) {
+    .nav-arrow-container{
+        align-items: flex-end;
+        padding: 0;
+        padding-bottom: 2rem;
+
+        .left-arrow {animation: pulseLeftMobile 1s ease infinite alternate-reverse}
+        .right-arrow {animation: pulseRightMobile 1s ease infinite alternate-reverse}
+    }
+}
