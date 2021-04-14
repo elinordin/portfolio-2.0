@@ -348,6 +348,7 @@ header .hide {
           align-items: center;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+  z-index: 2;
 }
 
 .brain-wrapper .brain-img {

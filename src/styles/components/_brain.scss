@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     transition: 1s ease;
+    z-index: 2;
     .brain-img {
         max-height: 470px;
         position: relative;
