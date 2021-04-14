@@ -14,7 +14,7 @@ function Switch(props) {
     }
 
     return (
-        <button type='button' role='switch' aria-checked={isOn} onClick={() => toggle()}>
+        <button type='button' role='switch' className={`${props.type}-btn`} aria-checked={isOn} onClick={() => toggle()}>
             {props.type === 'music' && <span className='text'>{props.music === 'on'? 'ON' : 'OFF'}</span>}
             {props.type === 'theme' && <span className='text'>{props.theme === 'light' ? 'LIGHT' : 'DARK'}</span>}
             {props.type === 'music' && <img className='slider' alt='music icon' src={props.music === 'on'? musicOn : musicOff}/>}

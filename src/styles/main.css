@@ -267,6 +267,18 @@ header .hide {
   display: none;
 }
 
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 8%;
+    padding-bottom: 2.5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
 .switches-container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -328,6 +340,18 @@ header .hide {
 [role='switch'][aria-checked='true'] .slider {
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
+}
+
+@media only screen and (max-width: 768px) {
+  .switches-container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 1rem;
+  }
+  .switches-container .music-btn {
+    display: none;
+  }
 }
 
 .brain-wrapper {
