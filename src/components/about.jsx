@@ -7,6 +7,8 @@ import github from '../assets/icons/github.png'
 import linkedin from '../assets/icons/linkedin.png'
 import cv from '../assets/icons/cv.png'
 
+import cvDoc from '../assets/data/cv.pdf'
+
 function About() {
     return (
         <section className='about'>
@@ -18,10 +20,10 @@ function About() {
                 my <span>brain</span>, <span>heart</span> or <span>soul</span>, reach out on the links below!</p>
 
                 <div className='links'>
-                    <a href='mailto:elin.nordin@hyperisland.se' aria-label='Email me'><img alt='Email icon' src={mail}/></a>
-                    <a href='https://github.com/elinordin' aria-label='Go to my github'><img alt='Github icon' src={github}/></a>
-                    <a href='https://www.linkedin.com/in/elinordin/' aria-label='Go to my linkedin'><img alt='Linkedin icon' src={linkedin}/></a>
-                    <a href=' ' download="CV - Elin Nordin" aria-label='Download my CV'><img alt='Documents icon' src={cv}/></a>
+                    <a href='mailto:elin.nordin@hyperisland.se' aria-label='Email me' target='_blank'><img alt='Email icon' src={mail}/></a>
+                    <a href='https://github.com/elinordin' aria-label='Go to my github' target='_blank'><img alt='Github icon' src={github}/></a>
+                    <a href='https://www.linkedin.com/in/elinordin/' aria-label='Go to my linkedin' target='_blank'><img alt='Linkedin icon' src={linkedin}/></a>
+                    <a href={cvDoc} download="CV - Elin Nordin" aria-label='Download my CV' target='_blank'><img alt='Documents icon' src={cv}/></a>
                 </div>
             </div>    
 
