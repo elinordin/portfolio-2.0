@@ -7,7 +7,7 @@ function Header(props) {
     return (
         <header className={`${props.position}-header`}>
             <div className='arrow-text-container'>
-                {props.position != 'center' &&
+                {props.position !== 'center' &&
                     <button
                         type='button'
                         aria-label='Go back to start page'

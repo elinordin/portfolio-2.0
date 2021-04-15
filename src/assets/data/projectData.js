@@ -12,7 +12,7 @@ const projects = [
         image: internagoImg,
         alt: 'Illustration: Computer on top of a blue desk with notifications, a green small plant and a pair of glasses.',
         bullets: 'Client • Team Lead • Design • Frontend • React • Gatsby • Figma',
-        readMe: 'https://github.com/elinordin/Habit-tracker/blob/main/README.md',
+        readMe: 'https://github.com/internago/internago-webpage/blob/master/README.md',
         url: 'https://inspiring-heyrovsky-bd5ba4.netlify.app/'
     },
     {
