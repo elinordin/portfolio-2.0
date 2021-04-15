@@ -342,6 +342,10 @@ header {
           justify-content: space-between;
 }
 
+header .nav-button {
+  display: none;
+}
+
 header .slide-out {
   -webkit-animation: zoomOutUp 0.8s ease-out 1.2s forwards;
           animation: zoomOutUp 0.8s ease-out 1.2s forwards;
@@ -352,9 +356,28 @@ header .hide {
 }
 
 @media only screen and (max-width: 768px) {
-  header h1 {
+  header .arrow-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  header .arrow-text-container h1 {
     -webkit-transition: 1s ease;
     transition: 1s ease;
+  }
+  header .arrow-text-container .nav-button {
+    display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header .arrow-text-container .arrow {
+    height: 3rem;
+    width: 3rem;
   }
   .center-header {
     padding: 8%;
@@ -364,13 +387,19 @@ header .hide {
             flex-direction: column-reverse;
     text-align: center;
   }
-  .left-header, .right-header {
+  .center-header .arrow-text-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1rem;
+  }
+  .left-header {
     padding: 8%;
   }
-  .left-header h1, .right-header h1 {
+  .left-header h1 {
     font-size: 1.5rem;
   }
-  .left-header h2, .right-header h2 {
+  .left-header h2 {
     display: none;
   }
 }
@@ -443,7 +472,6 @@ header .hide {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    margin-bottom: 1rem;
   }
   .switches-container .music-btn {
     display: none;
