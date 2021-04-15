@@ -44,7 +44,7 @@ function App() {
   return (
     <div id='app' className={`${theme} ${position}`}>
 
-      <Header position={position} theme={theme} music={music} toggleSwitch={toggleSwitch} />
+      <Header position={position} theme={theme} music={music} toggleSwitch={toggleSwitch} navigate={navigate}/>
 
       <main>
         <Brain position={position} navigate={navigate} />

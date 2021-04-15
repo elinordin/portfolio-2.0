@@ -14,8 +14,22 @@ header {
 
 @media only screen and (max-width: 768px) {
     header {
+        h1 {
+            transition: 1s ease;;
+        }
+    }
+    .center-header {
         padding: 8%;
         flex-direction: column-reverse;
         text-align: center;
+    }
+    .left-header, .right-header {
+        padding: 8%;
+        h1 {
+            font-size: $heading-l;
+        }
+        h2 {
+            display: none;
+        }
     }
 }
