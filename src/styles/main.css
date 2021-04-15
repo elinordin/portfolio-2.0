@@ -250,7 +250,7 @@ main {
 }
 
 .dark .arrow path {
-  fill: rgba(255, 255, 255, 0.6);
+  fill: rgba(255, 255, 255, 0.7);
 }
 
 .dark .portfolio-grid .links {
@@ -449,7 +449,7 @@ header .hide {
   font-size: 0.75rem;
   position: absolute;
   left: 8px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 [role='switch'] .slider {
@@ -648,7 +648,7 @@ header .hide {
   height: 100%;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   color: #323232;
   text-align: center;
   display: -webkit-box;
@@ -700,7 +700,7 @@ header .hide {
     max-width: 100%;
     -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
   }
   .portfolio-grid .info-wrapper .text {
     padding: 7%;
@@ -731,22 +731,27 @@ header .hide {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 2;
 }
 
 .about .text .slide-in {
   display: inline-block;
   -webkit-animation: backInDown 1.2s ease-out 1.8s backwards;
           animation: backInDown 1.2s ease-out 1.8s backwards;
+  position: relative;
+  z-index: 2;
 }
 
 .about .text p {
   max-width: 60ch;
   margin: 1.2rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .about .text a {
   margin-right: 0.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .about .text a :hover {
@@ -760,6 +765,7 @@ header .hide {
   top: 0;
   height: 100%;
   width: 100%;
+  z-index: 0;
 }
 
 .about .blob-list .list-item {
@@ -778,7 +784,6 @@ header .hide {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   cursor: pointer;
-  z-index: 0;
 }
 
 .about .blob-list .list-item .blob-text {
@@ -796,7 +801,7 @@ header .hide {
   .about .text {
     margin: 0;
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
     -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
     text-align: center;

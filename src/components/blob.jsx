@@ -5,6 +5,7 @@ function Blob(props) {
     return (
         <li 
         className='list-item' 
+        aria-label={props.interest.interest}
         style={{
             width: isBlobHovered? '7rem' : props.interest.size, 
             top: props.interest.position,

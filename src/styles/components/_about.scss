@@ -6,17 +6,22 @@
         margin-top: 7%;
         position: relative;
         width: fit-content;
-        z-index: 2;
         .slide-in{
             display: inline-block;
             animation: backInDown 1.2s ease-out 1.8s backwards;
+            position: relative;
+            z-index: 2;
         }
         p {
             max-width: 60ch;
             margin: 1.2rem 0;
+            position: relative;
+            z-index: 2;
         }
         a {
             margin-right: 0.5rem;
+            position: relative;
+            z-index: 2;
             :hover{
                 animation: swing 1s ease;
             }
@@ -29,7 +34,7 @@
         top: 0;
         height: 100%;
         width: 100%;
-    
+        z-index: 0;
         .list-item{
             display: flex;
             justify-content: center;
@@ -38,7 +43,6 @@
             transition: 0.5s ease;
             transform: translateX(-50%) translateY(-50%);
             cursor: pointer;
-            z-index: 0;
             .blob-text{
                 position: absolute;
                 font-size: $paragraph-xs;
