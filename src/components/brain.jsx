@@ -6,7 +6,7 @@ function Brain(props) {
     
     return (
         <button 
-            className={'brain-wrapper' + ' ' + 'brain' + '-' + props.position}
+            className={`brain-wrapper brain-${props.position}`}
             type='button' 
             aria-label={props.position === 'center'? 'wrapping img and shadow' : 'navigate to homescreen'} 
             aria-disabled={props.position === 'center'? true : false}

@@ -27,9 +27,9 @@
         .text {
             padding: 8%;
             padding-bottom: 0;
-        }
-        .title {
-            margin-bottom: 1rem;
+            .title {
+                margin-bottom: 1rem;
+            }
         }
         .links {
             display: flex;
@@ -45,6 +45,29 @@
 }
 
 
-
-
-
+@media only screen and (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 50%));
+        margin: 0;
+        padding: 1rem;
+        max-width: 100%;
+        backdrop-filter: blur(8px);
+        background-color: $white-glass;
+        .info-wrapper {
+            .text {
+                padding: 7%;
+                padding-bottom: 0;
+                .title {
+                    margin-bottom: 0.5rem;
+                    font-size: $heading-s;
+                }
+                p {
+                    font-size: $paragraph-xs;
+                }
+            }
+            .links {
+                font-size: $paragraph-xs;
+            }
+        }
+    }
+}

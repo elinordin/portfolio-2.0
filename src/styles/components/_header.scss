@@ -2,7 +2,9 @@ header {
     padding: 2.5% 8%;
     display: flex;
     justify-content: space-between;
-
+    .nav-button {
+        display: none;
+    }
     .slide-out {
         animation: zoomOutUp 0.8s ease-out 1.2s forwards;
     }
@@ -11,3 +13,42 @@ header {
     }
 }
 
+
+@media only screen and (max-width: 768px) {
+    header {
+        .arrow-text-container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            h1 {
+                transition: 1s ease;;
+            }
+            .nav-button {
+                display: block;
+                height: fit-content;
+            }
+            .arrow {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+    }
+    .center-header {
+        padding: 8%;
+        flex-direction: column-reverse;
+        text-align: center;
+        .arrow-text-container {
+            justify-content: center;
+            margin-top: 1rem;
+        }
+    }
+    .left-header, .right-header {
+        padding: 8%;
+        h1 {
+            font-size: $heading-l;
+        }
+        h2 {
+            display: none;
+        }
+    }
+}

@@ -18,7 +18,7 @@ function Portfolio() {
     return (
         
         <ul className='portfolio-grid'>
-            {projects.map((project) => <PortfolioListItem project={project} stats={languages}/>)}
+            {projects.map((project) => <PortfolioListItem key={project.key} project={project} stats={languages}/>)}
         </ul>
     );
 }

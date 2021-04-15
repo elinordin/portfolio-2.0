@@ -43,3 +43,12 @@
         transform: translateX(-50px);
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .switches-container {
+        align-items: flex-end;
+        .music-btn {
+            display: none;
+        }   
+    }
+}

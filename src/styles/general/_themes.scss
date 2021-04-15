@@ -56,3 +56,17 @@
 .center {background-position: center}
 .left {background-position: left}
 .right {background-position: right}
+
+@media only screen and (max-width: 768px) {
+    .light, .dark {
+        .about {
+            .text{
+                span{
+                    background: $darkmode;
+                    color: transparent;
+                    background-clip: text;
+                }
+            }
+        }
+    }
+}

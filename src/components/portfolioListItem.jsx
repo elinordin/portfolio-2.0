@@ -4,13 +4,17 @@ import Piechart from '../components/piechart.jsx'
 function PortfolioListItem(props) {
     const [style, setStyle] = useState({opacity: 0})
 
+    const handleClick = () => {
+        setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})
+    }
+
     return (
         <li className='box' 
             onMouseEnter={() => setStyle({opacity: 1})} 
             onMouseLeave={() => setStyle({opacity: 0})}
             onFocus={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})}
             onBlur={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})}
-            onClick={() => setStyle(style.opacity === 0 ? {opacity: 1}: {opacity: 0})} 
+            onClick={() => handleClick} 
         >
             <div className='info-wrapper' style={style}>
 

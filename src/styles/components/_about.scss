@@ -1,19 +1,89 @@
 .about{
     height: 100%;
-    padding-left: 15%;
-    padding-top: 7%;
     animation: fadeIn 0.5s ease-in 0.7s backwards;
     .text{
+        margin-left: 15%;
+        margin-top: 7%;
+        position: relative;
+        width: fit-content;
         .slide-in{
             display: inline-block;
             animation: backInDown 1.2s ease-out 1.8s backwards;
+            position: relative;
+            z-index: 2;
         }
         p {
             max-width: 60ch;
             margin: 1.2rem 0;
+            position: relative;
+            z-index: 2;
         }
         a {
             margin-right: 0.5rem;
+            position: relative;
+            z-index: 2;
+            :hover{
+                animation: swing 1s ease;
+            }
+        }
+    }
+
+    .blob-list {
+        list-style-type: none;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        .list-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            transition: 0.5s ease;
+            transform: translateX(-50%) translateY(-50%);
+            cursor: pointer;
+            .blob-text{
+                position: absolute;
+                font-size: $paragraph-xs;
+                color: $black;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+    
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        .text{
+            margin: 0;
+            padding: 2rem;
+            background-color: $white-glass;
+            backdrop-filter: blur(8px);
+            text-align: center;
+            color: $black;
+            p {
+                .slide-in {
+                    animation: none
+                }
+            }
+            .links {
+                display: flex;
+                justify-content: space-between;
+                a {
+                    margin: 0;
+                    img {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+        .blob-list {
+            display: none;
         }
     }
 }
