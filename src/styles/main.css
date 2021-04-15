@@ -497,12 +497,21 @@ header .hide {
 
 @media only screen and (max-width: 768px) {
   .brain-wrapper .brain-img {
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .brain-center .brain-img {
     max-height: 300px;
   }
-  .brain-wrapper .brain-shadow {
-    width: 180px;
+  .brain-center .brain-shadow {
     -webkit-animation: brainShadowMobile 2s ease infinite alternate;
             animation: brainShadowMobile 2s ease infinite alternate;
+  }
+  .brain-left, .brain-right {
+    z-index: 0;
+  }
+  .brain-left .brain-img, .brain-right .brain-img {
+    max-height: 500px;
   }
 }
 
@@ -606,7 +615,7 @@ header .hide {
   padding-bottom: 0;
 }
 
-.portfolio-grid .info-wrapper .title {
+.portfolio-grid .info-wrapper .text .title {
   margin-bottom: 1rem;
 }
 
@@ -625,6 +634,33 @@ header .hide {
   width: 100%;
   -webkit-filter: saturate(50%);
           filter: saturate(50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio-grid {
+    -ms-grid-columns: (minmax(7rem, 50%))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 50%));
+    margin: 0;
+    padding: 1rem;
+    max-width: 100%;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .portfolio-grid .info-wrapper .text {
+    padding: 7%;
+    padding-bottom: 0;
+  }
+  .portfolio-grid .info-wrapper .text .title {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .portfolio-grid .info-wrapper .text p {
+    font-size: 0.75rem;
+  }
+  .portfolio-grid .info-wrapper .links {
+    font-size: 0.75rem;
+  }
 }
 
 .about {

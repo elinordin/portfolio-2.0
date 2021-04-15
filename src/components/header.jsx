@@ -4,7 +4,7 @@ import Switches from '../components/switches.jsx'
 function Header(props) {
 
     return (
-        <header className="App-header">
+        <header className={`${props.position}-header`}>
             <div className={props.position === 'right'? 'slide-out' : undefined}>
                 <h1>Elin Nordin</h1>
                 <h2>frontend developer</h2>

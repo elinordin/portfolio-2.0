@@ -48,11 +48,21 @@
 @media only screen and (max-width: 768px) {
     .brain-wrapper {
         .brain-img {
+            transition: 1s ease;
+        }
+    }
+    .brain-center {
+        .brain-img {
             max-height: 300px;
-        }     
+        }
         .brain-shadow {
-            width: 180px;
             animation: brainShadowMobile 2s ease infinite alternate;
+        }
+    }
+    .brain-left, .brain-right {
+        z-index: 0;
+        .brain-img {
+            max-height: 500px;
         }
     }
 }
