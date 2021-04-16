@@ -27,8 +27,8 @@ function PortfolioListItem(props) {
                 {props.project.title.includes('Github') && <Piechart data={props.stats}/>}
                 
                 <div className='links'>
-                    <a href={props.project.readMe}>Read more</a>
-                    {props.project.hasOwnProperty('url') && <a href={props.project.url}>Go to site</a>}
+                    <a href={props.project.readMe} target='_blank'>Read more</a>
+                    {props.project.hasOwnProperty('url') && <a href={props.project.url} target='_blank'>Go to site</a>}
                 </div>
             </div>
             <img src={props.project.image} alt={props.project.alt}></img>
