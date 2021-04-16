@@ -22,8 +22,9 @@ My new portfolio created using create-react-app
 
 
 ### :computer: Tech stack
-* [React] (https://reactjs.org/docs/create-a-new-react-app.html)
-* [Sass] (https://sass-lang.com/)
-* [Nivo - as the diagram-library for my github projects] (https://nivo.rocks/pie/)
-* [Adobe Illustrator] (https://www.adobe.com/se/products/illustrator.html)
-* [Figma] (https://figma.com)
+* [React](https://reactjs.org/docs/create-a-new-react-app.html)
+* [Sass](https://sass-lang.com/)
+* [Nivo - as the diagram-library for my github projects](https://nivo.rocks/pie/)
+* [useSound - to play the music](https://github.com/joshwcomeau/use-sound)
+* [Adobe Illustrator](https://www.adobe.com/se/products/illustrator.html)
+* [Figma](https://figma.com)
