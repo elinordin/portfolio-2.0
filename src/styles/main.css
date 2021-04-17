@@ -795,6 +795,8 @@ header .hide {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 @media only screen and (max-width: 768px) {

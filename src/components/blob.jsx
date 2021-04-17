@@ -35,7 +35,7 @@ function Blob(props) {
                     />
                 </path>
             </svg>
-            <p className='blob-text'>{isBlobHovered ? props.interest.interest : ' '}</p>
+            <p className='blob-text' style={{opacity: isBlobHovered? 1 : 0}}>{props.interest.interest}</p>
         </li>
     );
 }
