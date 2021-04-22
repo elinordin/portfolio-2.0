@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+const dataLayer = window.dataLayer;
 
 function Blob(props) {
     const [isBlobHovered, setIsBlobHovered] = useState(false)
+
+    useEffect(() =>{
+        if (isBlobHovered){
+            dataLayer.push({'event': 'blob-hover', 'displayedInterest': props.interest.interest})
+        }
+    }, [isBlobHovered, props.interest.interest])
+
     return (
         <li 
         className='list-item' 
