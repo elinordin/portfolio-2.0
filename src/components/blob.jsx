@@ -6,7 +6,7 @@ function Blob(props) {
 
     useEffect(() =>{
         if (isBlobHovered){
-            dataLayer.push({'event': 'blob-hover', 'displayedInterest': props.interest.interest})
+            dataLayer.push({'event': 'Blob Hover', 'displayedInterest': props.interest.interest})
         }
     }, [isBlobHovered, props.interest.interest])
 
