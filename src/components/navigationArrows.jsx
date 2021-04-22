@@ -10,7 +10,7 @@ function NavigationArrows(props) {
             <button 
             type='button' 
             aria-label='Go to portfolio' 
-            className='nav-button'
+            className='nav-button to-portfolio-btn'
             onMouseEnter={() => props.navigate('left')} 
             onClick={() => props.navigate('left')}
             >
@@ -20,7 +20,7 @@ function NavigationArrows(props) {
             <button 
             type='button' 
             aria-label='Go to about me' 
-            className='nav-button' 
+            className='nav-button to-about-btn' 
             onMouseEnter={() => props.navigate('right')} 
             onClick={() => props.navigate('right')}
             >

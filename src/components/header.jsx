@@ -11,7 +11,7 @@ function Header(props) {
                     <button
                         type='button'
                         aria-label='Go back to start page'
-                        className='nav-button'
+                        className='nav-button to-start-btn'
                         onClick={() => props.navigate('center')}
                     >
                         <ChevronLeft className='arrow' />
