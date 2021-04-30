@@ -38,6 +38,9 @@ function App(props) {
 
   const navigate = (direction) => {
     setPosition(direction)
+    direction === 'center' && window.history.replaceState(null, 'Elin Nordin - Frontend Developer', '/')
+    direction === 'left' && window.history.replaceState(null, 'Elin Nordin - Portfolio', '/projects')
+    direction === 'right' && window.history.replaceState(null, 'Elin Nordin - About me', '/about')
   }
 
 
