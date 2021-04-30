@@ -11,12 +11,12 @@ import useSound from 'use-sound';
 import song from '../assets/music/background-sound.mp3'
 
 
-function App() {
+function App(props) {
   let lightmode = window.matchMedia('(prefers-color-scheme: light)').matches;
 
   const [theme, setTheme] = useState(lightmode? 'light': 'dark')
   const [music, setMusic] = useState('off')
-  const [position, setPosition] = useState('center')
+  const [position, setPosition] = useState(props.position)
   const [play, { pause }] = useSound(song, {volume: 0.1, loop: true});
 
   const toggleSwitch = (switchType) => {
@@ -38,6 +38,9 @@ function App() {
 
   const navigate = (direction) => {
     setPosition(direction)
+    direction === 'center' && window.history.replaceState(null, 'Elin Nordin - Frontend Developer', '/')
+    direction === 'left' && window.history.replaceState(null, 'Elin Nordin - Portfolio', '/projects')
+    direction === 'right' && window.history.replaceState(null, 'Elin Nordin - About me', '/about')
   }
 
 

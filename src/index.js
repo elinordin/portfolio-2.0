@@ -4,9 +4,27 @@ import './styles/main.css';
 import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+        <Router>
+        <Switch>
+          <Route exact path="/">
+            <App position='center'/>
+          </Route>
+          <Route path="/projects">
+            <App position='left'/>
+          </Route>
+          <Route path="/about">
+            <App position='right'/>
+          </Route>
+        </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
