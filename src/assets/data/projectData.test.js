@@ -20,6 +20,10 @@ projects.forEach((project, index) => {
             expect(project).toHaveProperty('key')
         })
 
+        test('contains a title', () => {
+            expect(project).toHaveProperty('title')
+        })
+
         test('contains an image', () => {
             expect(project).toHaveProperty('image')
         })
