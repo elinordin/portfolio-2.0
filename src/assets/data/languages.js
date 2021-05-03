@@ -50,39 +50,24 @@ const fetchLanguages = async (repos) => {
 }
 
 
-const convertToPercent = (languagesInBytes) => {
-  let languagesInPercent = languagesInBytes
-  let sum = 0;
-  let percentage = 0;
+const convertToPercent = (languages) => {
+  
+  let sum = 0
+  languages.forEach(language => sum += language.value)
+  languages.map((language) => language.value = Math.round((language.value / sum) * 1000) / 10)
 
-  languagesInBytes.forEach(language => {
-    sum += language.value;
-  });
-
-  languagesInBytes.map((language, index) => {
-    percentage = Math.round((language.value / sum) * 1000) / 10;
-    return languagesInPercent[index].value = percentage;
-  })
-
-  return languagesInPercent;
+  return languages
 }
 
 
-const checkForOther = (languagesInPercent) => {
-  let sumOfOther = 0;
+const checkForOther = (languages) => {
 
-  let sumFunction = (total, currentLanguage) => {
-    return total + currentLanguage.value;
-  }
-
-  sumOfOther = Math.round(languagesInPercent.filter(language => language.value < 1).reduce(sumFunction, 0) * 10) / 10;
-  let languages = languagesInPercent.filter(language => language.value > 1);
-
-  if (sumOfOther > 0) {
-    languages.splice()
-    languages.push(new Language("Other", sumOfOther, '#CCCCCC'));
-  }
-  return languages;
+  let sumOfOther = 0
+  languages.filter(language => language.value < 1).forEach(otherLanguage => sumOfOther+= otherLanguage.value)
+  languages = languages.filter(language => language.value > 1)
+  if (sumOfOther > 0) {languages.push(new Language("Other", sumOfOther, '#CCCCCC'))}
+  
+  return languages
 }
 
 

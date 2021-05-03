@@ -29,6 +29,7 @@ describe('convertToPercent', () => {
         ]
         expect(convertToPercent(languagesInBytes)).toEqual(languagesInPercent)
     })
+    
 })
 
 describe('getLanguages', () => {
