@@ -1,20 +1,11 @@
 class Language {
-  constructor(language, bytes, color) {
-    this.language = language
-    this.bytes = bytes
-    this.color = color
-  }
-}
-
-class LanguageData {
-  constructor(language, percent, color) {
+  constructor(language, value, color) {
     this.id = language
     this.label = language
-    this.value = percent
+    this.value = value
     this.color = color
   }
 }
-
 
 const fetchRepos = async () => {
   const repoResp = await fetch('https://api.github.com/users/elinordin/repos').then(res => res.json())
@@ -40,8 +31,8 @@ const fetchLanguages = async (repos) => {
             languagesInBytes.push(new Language(languageName, languageBytes[index], colors[index]))
           } else {
             languagesInBytes.forEach(language => {
-              if (languageName === language.language && !hasLanguageBeenSaved) {
-                language.bytes += languageBytes[index]
+              if (languageName === language.label && !hasLanguageBeenSaved) {
+                language.value += languageBytes[index]
                 hasLanguageBeenSaved = true
               }
             })
@@ -65,12 +56,12 @@ const convertToPercent = (languagesInBytes) => {
   let percentage = 0;
 
   languagesInBytes.forEach(language => {
-    sum += language.bytes;
+    sum += language.value;
   });
 
   languagesInBytes.map((language, index) => {
-    percentage = Math.round((language.bytes / sum) * 1000) / 10;
-    return languagesInPercent[index].bytes = percentage;
+    percentage = Math.round((language.value / sum) * 1000) / 10;
+    return languagesInPercent[index].value = percentage;
   })
 
   return languagesInPercent;
@@ -81,11 +72,11 @@ const checkForOther = (languagesInPercent) => {
   let sumOfOther = 0;
 
   let sumFunction = (total, currentLanguage) => {
-    return total + currentLanguage.bytes;
+    return total + currentLanguage.value;
   }
 
-  sumOfOther = Math.round(languagesInPercent.filter(language => language.bytes < 1).reduce(sumFunction, 0) * 10) / 10;
-  let languages = languagesInPercent.filter(language => language.bytes > 1);
+  sumOfOther = Math.round(languagesInPercent.filter(language => language.value < 1).reduce(sumFunction, 0) * 10) / 10;
+  let languages = languagesInPercent.filter(language => language.value > 1);
 
   if (sumOfOther > 0) {
     languages.splice()
@@ -95,24 +86,12 @@ const checkForOther = (languagesInPercent) => {
 }
 
 
-const deconstructArray = (languagesWithOther) => {
-  let languageData = []
-
-  languagesWithOther.forEach((language) => {
-    languageData.push(new LanguageData(language.language, language.bytes, language.color))
-  })
-
-  return languageData
-}
-
-
 const getLanguages = async () => {
   const repos = await fetchRepos()
   const languagesInBytes = await fetchLanguages(repos)
   const languagesInPercent = convertToPercent(languagesInBytes)
-  const languagesWithOther = checkForOther(languagesInPercent)
-  const languages = deconstructArray(languagesWithOther)
+  const languages = checkForOther(languagesInPercent)
   return languages
 }
 
-export default getLanguages
+module.exports = {convertToPercent, checkForOther, getLanguages}
