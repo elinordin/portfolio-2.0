@@ -6,7 +6,7 @@ My new portfolio created using create-react-app
 - [x] Redesign and build a new portfolio that I am proud to show. I want to make a clean and interactive website that lets the user explore but still makes it easy to find the most essential information. I also want to send of a professional but playful vibe with the design and make the visitor curious to know more.
 - [x] Try out SASS
 - [x] Practice making user stories in my Kanban board
-- [ ] Apply and practice testing
+- [x] Apply and practice testing
 
 
 ### :closed_book: Learnings:
@@ -14,12 +14,13 @@ My new portfolio created using create-react-app
 * Exploring Github-Projects and how helpful it is to work with a Kanban-board to keep on track
 * Tried out Sass which I really enjoyed
 * Cross-browser testing is a good thing to have in mind throughout the whole project (background-blur is not available in Firefox for example)
-* A11y-learnings and mindset (for example I re-factored my switches I think 4 times to make them more accessible), next time I will have those learnings in mind directly instead of remaking the same component
+* A11y-learnings and mindset, for example I re-factored my switches I think 4 times to make them more accessible. 
 * Going back to a previous project (I re-used and refactored some code from a previous brief to fetch my language-data from the github-API) can really help to see my own progress and how much I've learned in just a few months
 * Asking for feedback on my prototype from my classmates before starting to develop it was really valuable and made my end-product much better
 * More practice and better understanding of Adobe Illustrator
 * More in-depth figma skills - components, variables and animations
 * Basic understanding of Google Analytics and Google Tag Manager
+* I've started practicing unit testing with jest
 
 
 ### :computer: Tech stack
