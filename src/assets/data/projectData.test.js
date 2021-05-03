@@ -12,9 +12,9 @@ describe('Projects', () => {
 
 })
 
-projects.forEach((project, index) => {
+projects.forEach((project) => {
 
-    describe(`Project ${index + 1}`, () => {
+    describe(`Project ${project.key}`, () => {
 
         test('contains a key', () => {
             expect(project).toHaveProperty('key')
