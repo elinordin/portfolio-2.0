@@ -51,7 +51,7 @@ const fetchLanguages = async (repos) => {
 
 
 const convertToPercent = (languages) => {
-  
+
   let sum = 0
   languages.forEach(language => sum += language.value)
   languages.map((language) => language.value = Math.round((language.value / sum) * 1000) / 10)
@@ -63,10 +63,10 @@ const convertToPercent = (languages) => {
 const checkForOther = (languages) => {
 
   let sumOfOther = 0
-  languages.filter(language => language.value < 1).forEach(otherLanguage => sumOfOther+= otherLanguage.value)
+  languages.filter(language => language.value < 1).forEach(otherLanguage => sumOfOther += otherLanguage.value)
   languages = languages.filter(language => language.value > 1)
-  if (sumOfOther > 0) {languages.push(new Language("Other", sumOfOther, '#CCCCCC'))}
-  
+  if (sumOfOther > 0) { languages.push(new Language("Other", sumOfOther, '#CCCCCC')) }
+
   return languages
 }
 
@@ -79,4 +79,4 @@ const getLanguages = async () => {
   return languages
 }
 
-module.exports = {convertToPercent, checkForOther, getLanguages}
+module.exports = { convertToPercent, checkForOther, getLanguages }
