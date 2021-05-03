@@ -79,4 +79,4 @@ const getLanguages = async () => {
   return languages
 }
 
-module.exports = { convertToPercent, checkForOther, getLanguages }
+export { convertToPercent, checkForOther, getLanguages }
