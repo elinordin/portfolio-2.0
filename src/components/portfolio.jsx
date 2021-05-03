@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import PortfolioListItem from '../components/portfolioListItem.jsx'
 import projects from '../assets/data/projectData'
 
-import getLanguages from '../assets/data/languages'
+import {getLanguages} from '../assets/data/languages'
 
 function Portfolio() {
     const [languages, setLanguages] = useState([])
