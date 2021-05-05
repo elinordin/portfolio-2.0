@@ -4,7 +4,7 @@ const opacity = 'B3'
 
 const getRandomFill = () => {return fills[Math.floor(Math.random() * fills.length)] + opacity}
 const getRandomSize = () => {return sizes[Math.floor(Math.random() * sizes.length)]}
-const getRandomPosition = () => {return Math.floor(Math.random() * 80) + '%'}
+const getRandomPosition = () => {return Math.floor(Math.random() * 70) + '%'}
 const getRandomSpeed = () => {return Math.floor((Math.random() * 6) + 1)}
 const getDelay = () => {return Math.floor(Math.random() * 8) + 's'}
 

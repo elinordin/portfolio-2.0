@@ -24,6 +24,7 @@ function App(props) {
       if (theme === 'light') { setTheme('dark') }
       else if (theme === 'dark') { setTheme('light') }
     }
+    
     else if (switchType === 'music') {
       if (music === 'on') { 
         pause() 

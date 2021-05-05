@@ -507,7 +507,7 @@ header .hide {
 }
 
 .brain-wrapper .brain-img {
-  max-height: 470px;
+  height: 60vh;
   position: relative;
 }
 
