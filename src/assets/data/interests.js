@@ -5,8 +5,7 @@ const opacity = 'B3'
 const getRandomFill = () => {return fills[Math.floor(Math.random() * fills.length)] + opacity}
 const getRandomSize = () => {return sizes[Math.floor(Math.random() * sizes.length)]}
 const getRandomPosition = () => {return Math.floor(Math.random() * 80) + '%'}
-const getRandomSvgSpeed = () => {return Math.floor((Math.random() * 6) + 1) + 's'}
-const getRandomMoveSpeed = () => {return Math.floor((Math.random() * 25) + 20) + 's'}
+const getRandomSpeed = () => {return Math.floor((Math.random() * 6) + 1)}
 const getDelay = () => {return Math.floor(Math.random() * 8) + 's'}
 
 
@@ -18,8 +17,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -28,8 +26,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -38,8 +35,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -48,8 +44,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -58,8 +53,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -68,8 +62,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -78,8 +71,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -88,8 +80,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -98,8 +89,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -108,8 +98,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -118,8 +107,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -128,8 +116,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -138,8 +125,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -148,8 +134,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
     {
@@ -158,8 +143,7 @@ const interests = [
         fill: getRandomFill(),
         size: getRandomSize(),
         position: getRandomPosition(),
-        svgSpeed: getRandomSvgSpeed(),
-        moveSpeed: getRandomMoveSpeed(),
+        speed: getRandomSpeed(),
         delay: getDelay(),
     },
 ]

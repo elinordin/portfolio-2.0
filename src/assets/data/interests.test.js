@@ -14,8 +14,7 @@ interests.forEach((interest) => {
             'fill',
             'size',
             'position',
-            'svgSpeed',
-            'moveSpeed',
+            'speed',
             'delay')
     })
 
