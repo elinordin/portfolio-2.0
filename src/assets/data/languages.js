@@ -1,3 +1,8 @@
+const apiOptions = 
+{
+  cache: 'force-cache',
+}
+
 class Language {
   constructor(language, value, color) {
     this.id = language
@@ -8,7 +13,7 @@ class Language {
 }
 
 const fetchRepos = async () => {
-  const repoResp = await fetch('https://api.github.com/users/elinordin/repos').then(res => res.json())
+  const repoResp = await fetch('https://api.github.com/users/elinordin/repos', apiOptions).then(res => res.json())
   return repoResp
 }
 
@@ -20,7 +25,7 @@ const fetchLanguages = async (repos) => {
     let hasLanguageBeenSaved = false
 
     await Promise.all(repos.map(async repo => {
-      const langResp = await fetch(repo.languages_url)
+      const langResp = await fetch(repo.languages_url, apiOptions)
       const languageData = await langResp.json()
       const languageBytes = Object.values(languageData)
       const languageNames = Object.keys(languageData)
